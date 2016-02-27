@@ -40,8 +40,43 @@ html, body {
   height: 100%;
   margin: 0px; }
 
+#home-text {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  left: 0; }
+
 h1, h2, h3, h4 {
-  font-family: Georgia, Times, Times New Roman, serif; }
+  font-family: Georgia, Times, Times New Roman, serif;
+  white-space: nowrap; }
+
+#home-text {
+  position: absolute;
+  top: 27%;
+  right: 0;
+  left: 0; }
+  #home-text h1 {
+    color: white;
+    font-size: 10vmin; }
+  #home-text h2 {
+    color: #4f558e;
+    font-size: 7.5vmin;
+    margin-top: -10px; }
+  #home-text h3 {
+    color: #8e4f73;
+    font-size: 8.5vmin;
+    margin-top: 45vmin; }
+  #home-text h4 {
+    color: #4f558e;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 4vmin;
+    margin-top: 0px; }
+
+.pixel {
+  font-family: 'munroregular';
+  letter-spacing: 1px;
+  padding-left: 2px; }
 
 .pink {
   color: #8e4f73; }
@@ -52,23 +87,38 @@ h1, h2, h3, h4 {
 .white {
   color: #fff; }
 
-#index {
+#spacey {
   height: 100%;
   background: #292c4f;
   margin: 0;
   padding: 0;
   overflow: hidden; }
-
-#stars {
-  height: 60%;
-  background: #15142d url(../img/stars.png) repeat top center; }
-
-#twinkle {
-  height: 100%;
-  min-height: 100%;
-  background: transparent url(../img/twinkle.png) repeat top center;
-  -webkit-animation: twinkle 400s linear infinite;
-  animation: twinkle 400s linear infinite; }
+  #spacey #stars {
+    height: 60%;
+    background: #15142d url(../img/stars.png) repeat top center; }
+    #spacey #stars #twinkle {
+      height: 100%;
+      min-height: 100%;
+      background: transparent url(../img/twinkle.png) repeat top center;
+      -webkit-animation: twinkle 400s linear infinite;
+      animation: twinkle 400s linear infinite; }
+  #spacey #cloudsBack {
+    position: relative;
+    top: -100px;
+    width: 100%;
+    height: 160px;
+    background: url(../img/cloudsBack.png) repeat-x;
+    -webkit-animation: cloudsBack 100s linear infinite;
+    animation: cloudsBack 100s linear infinite; }
+    #spacey #cloudsBack #cloudsFront {
+      position: relative;
+      top: 70px;
+      width: 100%;
+      height: 100px;
+      background: url(../img/cloudsFront.png) repeat-x;
+      text-align: center;
+      -webkit-animation: cloudsFront 80s linear infinite;
+      animation: cloudsFront 80s linear infinite; }
 
 @-webkit-keyframes twinkle {
   from {
@@ -80,15 +130,6 @@ h1, h2, h3, h4 {
     background-position: 0 0; }
   to {
     background-position: -8000px 7000px; } }
-#cloudsBack {
-  position: relative;
-  top: -100px;
-  width: 100%;
-  height: 160px;
-  background: url(../img/cloudsBack.png) repeat-x;
-  -webkit-animation: cloudsBack 100s linear infinite;
-  animation: cloudsBack 100s linear infinite; }
-
 @-webkit-keyframes cloudsBack {
   from {
     background-position: 0 0; }
@@ -100,56 +141,6 @@ h1, h2, h3, h4 {
     background-position: 0 0; }
   to {
     background-position: -1021px 0px; } }
-#cloudsFront {
-  position: relative;
-  top: 70px;
-  width: 100%;
-  height: 100px;
-  background: url(../img/cloudsFront.png) repeat-x;
-  text-align: center;
-  -webkit-animation: cloudsFront 80s linear infinite;
-  animation: cloudsFront 80s linear infinite; }
-  #cloudsFront h1, #cloudsFront h2, #cloudsFront h3, #cloudsFront h4 {
-    position: relative;
-    white-space: nowrap; }
-    @media (orientation: portrait) {
-      #cloudsFront h1, #cloudsFront h2, #cloudsFront h3, #cloudsFront h4 {
-        top: -32vh; } }
-    @media (orientation: landscape) {
-      #cloudsFront h1, #cloudsFront h2, #cloudsFront h3, #cloudsFront h4 {
-        top: -15vw; } }
-  #cloudsFront h1 {
-    color: white;
-    font-size: 6rem; }
-    @media (max-width: 667px) {
-      #cloudsFront h1 {
-        font-size: 9vw; } }
-  #cloudsFront h2 {
-    color: #4f558e;
-    font-size: 5rem; }
-    @media (max-width: 667px) {
-      #cloudsFront h2 {
-        font-size: 7.5vw; } }
-  #cloudsFront h3 {
-    color: #8e4f73;
-    font-size: 6rem;
-    margin-top: 12%; }
-    @media (max-width: 667px) {
-      #cloudsFront h3 {
-        font-size: 9vw; } }
-  #cloudsFront h4 {
-    color: #4f558e;
-    font-size: 3.1rem;
-    letter-spacing: 5px;
-    text-transform: uppercase; }
-    @media (max-width: 667px) {
-      #cloudsFront h4 {
-        font-size: 4.5vw; } }
-  #cloudsFront .pixel {
-    font-family: 'munroregular';
-    letter-spacing: 1px;
-    padding-left: 2px; }
-
 @-webkit-keyframes cloudsFront {
   from {
     background-position: 0 0; }
@@ -161,8 +152,15 @@ h1, h2, h3, h4 {
     background-position: 0 0; }
   to {
     background-position: 949px 0px; } }
-.row {
-  max-width: 1300px;
-  margin: 0 auto; }
+@media (max-width: 1119px) and (orientation: landscape) {
+  #home-text {
+    top: 10%; }
+    #home-text h3 {
+      margin-top: 35vmin; } }
+@media (min-width: 1200px) {
+  #home-text {
+    top: 20%; }
+    #home-text h3 {
+      margin-top: 27vmin; } }
 
 /*# sourceMappingURL=styles.css.map */
