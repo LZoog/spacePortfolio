@@ -40,19 +40,13 @@ html, body {
   height: 100%;
   margin: 0px; }
 
-#home-text {
-  position: absolute;
-  top: 30%;
-  right: 0;
-  left: 0; }
-
 h1, h2, h3, h4 {
   font-family: Georgia, Times, Times New Roman, serif;
   white-space: nowrap; }
 
 #home-text {
   position: absolute;
-  top: 27%;
+  top: 24%;
   right: 0;
   left: 0; }
   #home-text h1 {
