@@ -190,8 +190,24 @@ header {
 
 
 //* media queries *
+//larger than mobile
 @media all and (min-width: 768px){
   #home-text-top {
     top: -20em;
+  }
+}
+//landscape mobile
+@media all and (max-width: 767px) and (orientation: landscape) {
+  #home-text-top {
+    top: -12em;
+  }
+  #home-text-bottom {
+    top: 5em;
+  }
+}
+//some phones & tablets landscape
+@media all and (min-width: 768px) and (max-height: 500px) {
+  #home-text-top {
+    top: -13em;
   }
 }

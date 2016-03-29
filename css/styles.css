@@ -158,5 +158,14 @@ header {
 @media all and (min-width: 768px) {
   #home-text-top {
     top: -20em; } }
+@media all and (max-width: 767px) and (orientation: landscape) {
+  #home-text-top {
+    top: -12em; }
+
+  #home-text-bottom {
+    top: 5em; } }
+@media all and (min-width: 768px) and (max-height: 500px) {
+  #home-text-top {
+    top: -13em; } }
 
 /*# sourceMappingURL=styles.css.map */
