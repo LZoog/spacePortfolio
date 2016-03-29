@@ -35,6 +35,86 @@ h1, h2, h3, h4 {
   white-space: nowrap;
 }
 
+header {
+  width: 100%;
+  position: absolute;
+  padding: 10px;
+  top: 0px;
+
+  img:hover {
+    opacity: .65;
+  }
+
+  #link-icons {
+    float: left;
+
+    img {
+      margin-top: 7px;
+      width: 48px;
+      height: auto;
+    }
+  }
+
+  #project-icons {
+    float: right;
+
+    img:not(:nth-of-type(4))  {
+      margin-right: 2px;
+    }
+  }
+}
+
+div[id^="lightbox"] {
+  display: none;
+}
+
+.featherlight:last-of-type {
+    background: rgba(0,0,0,.65);
+}
+
+#spacey {
+  height: 100%;
+  background: $med-purp;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  #stars {
+    height: 60%;
+    background:$dark-purp url(../img/stars.png) repeat top center;
+
+    #twinkle {
+      height: 100%;
+      min-height: 100%;
+      background: transparent url(../img/twinkle.png) repeat top center;
+      -webkit-animation: twinkle 400s linear infinite;
+      animation: twinkle 400s linear infinite;
+    }
+  }
+
+  #cloudsBack {
+    position: relative;
+    top: -100px;
+    //100px to ensure stars show through transparency of image
+    width: 100%;
+    height: 160px;
+    background: url(../img/cloudsBack.png) repeat-x;
+    -webkit-animation: cloudsBack 100s linear infinite;
+    animation: cloudsBack 100s linear infinite;
+
+    #cloudsFront {
+      position: relative;
+      top: 70px;
+      width: 100%;
+      height: 100px;
+      background: url(../img/cloudsFront.png) repeat-x;
+      text-align: center;
+      -webkit-animation: cloudsFront 80s linear infinite;
+      animation: cloudsFront 80s linear infinite;
+    }
+  }
+}
+
 #home-text-top {
   position: absolute;
   top: -15em;
@@ -88,77 +168,6 @@ h1, h2, h3, h4 {
   color: $light-pink;
 }
 
-#spacey {
-  height: 100%;
-  background: $med-purp;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-
-  #stars {
-    height: 60%;
-    background:$dark-purp url(../img/stars.png) repeat top center;
-
-    #twinkle {
-      height: 100%;
-      min-height: 100%;
-      background: transparent url(../img/twinkle.png) repeat top center;
-      -webkit-animation: twinkle 400s linear infinite;
-      animation: twinkle 400s linear infinite;
-    }
-  }
-
-  #cloudsBack {
-    position: relative;
-    top: -100px;
-    //100px to ensure stars show through transparency of image
-    width: 100%;
-    height: 160px;
-    background: url(../img/cloudsBack.png) repeat-x;
-    -webkit-animation: cloudsBack 100s linear infinite;
-    animation: cloudsBack 100s linear infinite;
-
-    #cloudsFront {
-      position: relative;
-      top: 70px;
-      width: 100%;
-      height: 100px;
-      background: url(../img/cloudsFront.png) repeat-x;
-      text-align: center;
-      -webkit-animation: cloudsFront 80s linear infinite;
-      animation: cloudsFront 80s linear infinite;
-    }
-  }
-}
-
-header {
-  width:100%;
-  position:absolute;
-  padding: 5px 8px 0 0;
-  top: 0px;
-
-  img:hover {
-    opacity: .65;
-  }
-
-  .top-icons {
-    padding-right: 3px;
-
-    img {
-      margin: 5px;
-
-      &:first-of-type {
-        margin-right: 0
-      }
-    }
-  }
-
-  .bottom-icons img {
-    width: 35px;
-    height: auto;
-  }
-}
-
 //* animations *
 @-webkit-keyframes twinkle {
   from {background-position: 0 0;}
@@ -194,6 +203,16 @@ header {
 @media all and (min-width: 768px){
   #home-text-top {
     top: -20em;
+  }
+  header {
+    #link-icons img {
+      margin-top: 0;
+      width: auto;
+      height: auto;
+    }
+    #project-icons img:not(:nth-of-type(4)) {
+      margin-right: 8px;
+    }
   }
 }
 //landscape mobile

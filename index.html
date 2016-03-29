@@ -9,18 +9,25 @@
 	<meta name="web_author" content="Lauren Zugai" />
 	<title>My Web Portfolio</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+	<link href="http://cdn.rawgit.com/noelboss/featherlight/1.4.0/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 	<link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-	<header class="text-right">
-		<div class="top-icons">
-			<a href="#"><img src="img/icon-p1.png" target="_blank" alt="Project 1" /></a> <a href="#"><img src="img/icon-p2.png" target="_blank" alt="Project 1" /></a>
-		</div>
-		<div class="bottom-icons">
+	<header>
+		<div id="link-icons">
 			<a href="https://www.linkedin.com/in/lzoog" target="_blank"><img src="img/icon-li.png" alt="Linked In" /> <a href="https://github.com/LZoog" target="_blank"><img src="img/icon-gh.png" alt="Github" /></a> <a href="http://www.lzoog.com" target="_blank"><img src="img/icon-blog.png" alt="Blog" /></a>
 		</div>
+		<div id="project-icons">
+			<a href="#" data-featherlight="#lightbox1"><img src="img/icon-p1.png" target="_blank" alt="Project 1" /></a> <a href="#" data-featherlight="#lightbox3"><img src="img/icon-p2.png" target="_blank" alt="Project 2" /></a>
+			<a href="#" data-featherlight="#lightbox3"><img src="img/icon-p1.png" target="_blank" alt="Project 2" /></a> <a href="#" data-featherlight="#lightbox4"><img src="img/icon-p2.png" target="_blank" alt="Project 2" /></a>
+		</div>
 	</header>
+
+	<div id="lightbox1">pro1</div>
+	<div id="lightbox2">pro2</div>
+	<div id="lightbox3">pro3</div>
+	<div id="lightbox4">pro4</div>
 
 	<div class="container-fluid" id="spacey">
 		<div id="stars">
@@ -42,6 +49,7 @@
 
 	<script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="http://cdn.rawgit.com/noelboss/featherlight/1.4.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>

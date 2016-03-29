@@ -33,6 +33,63 @@ h1, h2, h3, h4 {
   font-family: Georgia, Times, Times New Roman, serif;
   white-space: nowrap; }
 
+header {
+  width: 100%;
+  position: absolute;
+  padding: 10px;
+  top: 0px; }
+  header img:hover {
+    opacity: .65; }
+  header #link-icons {
+    float: left; }
+    header #link-icons img {
+      margin-top: 7px;
+      width: 48px;
+      height: auto; }
+  header #project-icons {
+    float: right; }
+    header #project-icons img:not(:nth-of-type(4)) {
+      margin-right: 2px; }
+
+div[id^="lightbox"] {
+  display: none; }
+
+.featherlight:last-of-type {
+  background: rgba(0, 0, 0, 0.65); }
+
+#spacey {
+  height: 100%;
+  background: #292c4f;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+  #spacey #stars {
+    height: 60%;
+    background: #15142d url(../img/stars.png) repeat top center; }
+    #spacey #stars #twinkle {
+      height: 100%;
+      min-height: 100%;
+      background: transparent url(../img/twinkle.png) repeat top center;
+      -webkit-animation: twinkle 400s linear infinite;
+      animation: twinkle 400s linear infinite; }
+  #spacey #cloudsBack {
+    position: relative;
+    top: -100px;
+    width: 100%;
+    height: 160px;
+    background: url(../img/cloudsBack.png) repeat-x;
+    -webkit-animation: cloudsBack 100s linear infinite;
+    animation: cloudsBack 100s linear infinite; }
+    #spacey #cloudsBack #cloudsFront {
+      position: relative;
+      top: 70px;
+      width: 100%;
+      height: 100px;
+      background: url(../img/cloudsFront.png) repeat-x;
+      text-align: center;
+      -webkit-animation: cloudsFront 80s linear infinite;
+      animation: cloudsFront 80s linear infinite; }
+
 #home-text-top {
   position: absolute;
   top: -15em;
@@ -73,56 +130,6 @@ h1, h2, h3, h4 {
 .pink {
   color: #8e4f73; }
 
-#spacey {
-  height: 100%;
-  background: #292c4f;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; }
-  #spacey #stars {
-    height: 60%;
-    background: #15142d url(../img/stars.png) repeat top center; }
-    #spacey #stars #twinkle {
-      height: 100%;
-      min-height: 100%;
-      background: transparent url(../img/twinkle.png) repeat top center;
-      -webkit-animation: twinkle 400s linear infinite;
-      animation: twinkle 400s linear infinite; }
-  #spacey #cloudsBack {
-    position: relative;
-    top: -100px;
-    width: 100%;
-    height: 160px;
-    background: url(../img/cloudsBack.png) repeat-x;
-    -webkit-animation: cloudsBack 100s linear infinite;
-    animation: cloudsBack 100s linear infinite; }
-    #spacey #cloudsBack #cloudsFront {
-      position: relative;
-      top: 70px;
-      width: 100%;
-      height: 100px;
-      background: url(../img/cloudsFront.png) repeat-x;
-      text-align: center;
-      -webkit-animation: cloudsFront 80s linear infinite;
-      animation: cloudsFront 80s linear infinite; }
-
-header {
-  width: 100%;
-  position: absolute;
-  padding: 5px 8px 0 0;
-  top: 0px; }
-  header img:hover {
-    opacity: .65; }
-  header .top-icons {
-    padding-right: 3px; }
-    header .top-icons img {
-      margin: 5px; }
-      header .top-icons img:first-of-type {
-        margin-right: 0; }
-  header .bottom-icons img {
-    width: 35px;
-    height: auto; }
-
 @-webkit-keyframes twinkle {
   from {
     background-position: 0 0; }
@@ -157,7 +164,14 @@ header {
     background-position: 949px 0px; } }
 @media all and (min-width: 768px) {
   #home-text-top {
-    top: -20em; } }
+    top: -20em; }
+
+  header #link-icons img {
+    margin-top: 0;
+    width: auto;
+    height: auto; }
+  header #project-icons img:not(:nth-of-type(4)) {
+    margin-right: 8px; } }
 @media all and (max-width: 767px) and (orientation: landscape) {
   #home-text-top {
     top: -12em; }
