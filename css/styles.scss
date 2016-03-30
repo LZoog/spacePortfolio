@@ -26,7 +26,6 @@ $off-white: #f4edf5;
 }
 //***
 
-
 html, body {
   height: 100%;
   margin: 0px;
@@ -35,6 +34,43 @@ html, body {
 h1, h2, h3, h4 {
   font-family: Georgia, Times, Times New Roman, serif;
   white-space: nowrap;
+}
+
+.navbar {
+  background: none;
+  border: none;
+}
+
+.navbar-default .navbar-toggle {
+  background: none;
+
+  span.icon-bar {
+    background-color: $light-pink;
+  }
+
+  &:hover, &:active, &:visited {
+    background: none;
+    opacity: .65;
+    filter: alpha(opacity=65); //IE8
+  }
+}
+
+button {
+  background: none!important;
+}
+
+#blackout {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: black;
+}
+
+.hide {
+  visibility: visible;
 }
 
 header {
@@ -123,11 +159,20 @@ div[id^="fl-"] {
   padding: 0 10px 10px 10px;
 }
 
+.featherlight .featherlight-content {
+  background: url(../img/stars.png);
+}
+
+.featherlight-inner {
+  border-radius: 10px;
+  border: 2px dotted $off-white;
+}
+
 .feather {
   max-width: 800px;
 
   img:not(.hat) {
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
     margin-bottom: 15px;
   }
@@ -145,9 +190,9 @@ div[id^="fl-"] {
     text-align: center;
     color: $light-pink;
     font-size: 2em;
-    border-bottom: 1px dashed grey;
-    padding-bottom: 4px;
-    margin-bottom: 14px;
+    border-bottom: 1px solid $light-purp;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
     text-shadow: 1px 1px 3px $dark-purp;
   }
 
@@ -325,7 +370,7 @@ div[id^="fl-"] {
     h1 {
       font-size: 3em;
     }
-    img {
+    img:not(.hat) {
       width: 100%;
     }
   }
