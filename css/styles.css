@@ -29,13 +29,27 @@ html, body {
   height: 100%;
   margin: 0px; }
 
-h1, h2, h3, h4 {
+h1, h2 {
   font-family: Georgia, Times, Times New Roman, serif;
   white-space: nowrap; }
+
+strong {
+  color: #c088a8;
+  text-shadow: 1px 1px 3px #15142d; }
 
 .navbar {
   background: none;
   border: none; }
+
+div.navbar-header {
+  border-bottom: none; }
+
+.no-transition {
+  -webkit-transition: height 0.01s;
+  -moz-transition: height 0.01s;
+  -ms-transition: height 0.01s;
+  -o-transition: height 0.01s;
+  transition: height 0.01s; }
 
 .navbar-default .navbar-toggle {
   background: none; }
@@ -49,26 +63,15 @@ h1, h2, h3, h4 {
 button {
   background: none !important; }
 
-#blackout {
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  background-color: black; }
-
-.hide {
-  visibility: visible; }
-
 header {
   width: 100%;
   position: absolute;
   padding: 10px;
   top: 0px; }
   header #link-icons {
-    float: left;
-    margin-top: -7px; }
+    position: absolute;
+    top: 0;
+    left: 0; }
     header #link-icons span {
       position: relative;
       top: 12px;
@@ -81,16 +84,11 @@ header {
       -ms-transform: rotate(90deg);
       -webkit-transform: rotate(90deg);
       transform: rotate(90deg); }
-    header #link-icons img {
-      margin-top: 7px;
-      width: 48px;
-      height: auto; }
-      header #link-icons img:hover {
-        opacity: .65;
-        filter: alpha(opacity=65); }
+    header #link-icons img:hover {
+      opacity: .65;
+      filter: alpha(opacity=65); }
   header #project-icons {
-    margin-top: -12px;
-    float: right; }
+    text-align: center; }
     header #project-icons img {
       padding-top: 30px; }
       header #project-icons img:not(:nth-of-type(4)) {
@@ -282,12 +280,15 @@ div[id^="fl-"] {
   #home-text-top {
     top: -20em; }
 
-  header #link-icons img {
-    margin-top: 0;
-    width: auto;
-    height: auto; }
-  header #project-icons img:not(:nth-of-type(4)) {
-    margin-right: 8px; }
+  header #link-icons {
+    position: static;
+    float: left;
+    margin-top: -7px; }
+  header #project-icons {
+    margin-top: -12px;
+    float: right; }
+    header #project-icons img:not(:nth-of-type(4)) {
+      margin-right: 8px; }
 
   .feather h1 {
     font-size: 3em; }

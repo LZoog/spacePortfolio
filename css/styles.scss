@@ -31,14 +31,31 @@ html, body {
   margin: 0px;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
   font-family: Georgia, Times, Times New Roman, serif;
   white-space: nowrap;
+}
+
+strong {
+  color: $light-pink;
+  text-shadow: 1px 1px 3px $dark-purp;
 }
 
 .navbar {
   background: none;
   border: none;
+}
+
+div.navbar-header {
+  border-bottom: none;
+}
+
+.no-transition {
+  -webkit-transition: height 0.01s;
+  -moz-transition: height 0.01s;
+  -ms-transition: height 0.01s;
+  -o-transition: height 0.01s;
+  transition: height 0.01s;
 }
 
 .navbar-default .navbar-toggle {
@@ -59,20 +76,6 @@ button {
   background: none!important;
 }
 
-#blackout {
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  background-color: black;
-}
-
-.hide {
-  visibility: visible;
-}
-
 header {
   width: 100%;
   position: absolute;
@@ -80,8 +83,9 @@ header {
   top: 0px;
 
   #link-icons {
-    float: left;
-    margin-top: -7px;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     span {
       position: relative;
@@ -98,9 +102,6 @@ header {
     }
 
     img {
-      margin-top: 7px;
-      width: 48px;
-      height: auto;
 
       &:hover {
         opacity: .65;
@@ -110,8 +111,7 @@ header {
   }
 
   #project-icons {
-    margin-top: -12px;
-    float: right;
+    text-align: center;
 
     img {
       padding-top:30px;
@@ -356,14 +356,18 @@ div[id^="fl-"] {
     top: -20em;
   }
   header {
-
-    #link-icons img {
-      margin-top: 0;
-      width: auto;
-      height: auto;
+    #link-icons {
+      position: static;
+      float: left;
+      margin-top: -7px;
     }
-    #project-icons img:not(:nth-of-type(4)) {
-      margin-right: 8px;
+    #project-icons {
+      margin-top: -12px;
+      float: right;
+
+      img:not(:nth-of-type(4)) {
+        margin-right: 8px;
+      }
     }
   }
   .feather {
