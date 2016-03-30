@@ -10,24 +10,126 @@
 	<title>My Web Portfolio</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
 	<link href="http://cdn.rawgit.com/noelboss/featherlight/1.4.0/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
 	<header>
 		<div id="link-icons">
-			<a href="https://www.linkedin.com/in/lzoog" target="_blank"><img src="img/icon-li.png" alt="Linked In" /> <a href="https://github.com/LZoog" target="_blank"><img src="img/icon-gh.png" alt="Github" /></a> <a href="http://www.lzoog.com" target="_blank"><img src="img/icon-blog.png" alt="Blog" /></a>
+			<a href="#" data-featherlight="#fl-email"><img src="img/icon-email.png" alt="E-mail" /></a><span>***</span>
+			<a href="https://www.linkedin.com/in/lzoog"><img src="img/icon-li.png" alt="Linked In" /></a>
+			<a href="https://github.com/LZoog" target="_blank"><img src="img/icon-gh.png" alt="Github" /></a>
+			<a href="http://www.lzoog.com" target="_blank"><img src="img/icon-blog.png" alt="Blog" /></a>
 		</div>
 		<div id="project-icons">
-			<a href="#" data-featherlight="#lightbox1"><img src="img/icon-p1.png" target="_blank" alt="Project 1" /></a> <a href="#" data-featherlight="#lightbox3"><img src="img/icon-p2.png" target="_blank" alt="Project 2" /></a>
-			<a href="#" data-featherlight="#lightbox3"><img src="img/icon-p1.png" target="_blank" alt="Project 2" /></a> <a href="#" data-featherlight="#lightbox4"><img src="img/icon-p2.png" target="_blank" alt="Project 2" /></a>
+			<a href="#" data-featherlight="#fl-magicjays"><p>&nbsp; &nbsp; Magic</p><img src="img/icon-projects.png" alt="Project 2" /></a>
+			<a href="#" data-featherlight="#fl-kccleaners"><p>&nbsp;Dry Clean</p><img src="img/icon-projects.png" alt="Project 1" /></a>
+			<a href="#" data-featherlight="#fl-hoh"><p>&nbsp; &nbsp; &nbsp;HoH</p><img src="img/icon-projects.png" alt="Project 2" /></a>
+			<a href="#" data-featherlight="#fl-tictactoe"><p>&nbsp; tictactoe</p><img src="img/icon-projects.png" alt="Project 2" /></a>
 		</div>
 	</header>
 
-	<div id="lightbox1">pro1</div>
-	<div id="lightbox2">pro2</div>
-	<div id="lightbox3">pro3</div>
-	<div id="lightbox4">pro4</div>
+	<div id="fl-aboutme">
+		<div class="container feather">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>⭐️ About Me</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-5">
+					<img src="img/me.jpg" alt="Photo of Me" class="img-responsive" />
+				</div>
+				<div class="col-xs-12 col-sm-7">
+					<p>Hello world. 🤓</p>
+					<p>I've been an aspiring web developer as long as I can remember. I love modern & responsive design, graphic manipulation, and cleanly-coded front-end development. I enjoy creating unique user experiences by pushing the boundaries of what is capable with code. After recently discovering that I also enjoy back-end development, I now dream of one day becoming the ultimate 🦄&nbsp;unicorn: a full stack developer with front-end focus & a design aesthetic. (what a mouthful)</p>
+					<p>I am extremely detail-oriented & goal-oriented, I take initiative, I know how to meet deadlines, and I truly enjoy learning. I have a Bachelor's in Information Technology that I achieved in 3 years with honors, and I am currently a student in General Assembly's Web Development Immersion Program.</p>
+					<p>My other hobbies include weight lifting💪, watching Game of Thrones👑, and playing fetch with my dog. 🐕</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fl-email">
+		email
+	</div>
+
+	<div id="fl-magicjays">
+		<div class="container feather">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1><img src="img/magichat.png" class="hat">MagicJays (Full Front-End Site)</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-5 col-sm-push-7">
+					<img src="img/magicjays.jpg" alt="Screenshot of MagicJays" class="img-responsive" />
+				</div>
+				<div class="col-xs-12 col-sm-7 col-sm-pull-5">
+					<p>Text about magicjays site.</p>
+					<p>Text about magicjays site.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fl-kccleaners">
+		<div class="container feather">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>👗KC Cleaners (Full Front-End Site)</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-5 col-sm-push-7">
+					<img src="img/kccleaners.jpg" alt="Screenshot of KC Cleaners" class="img-responsive" />
+				</div>
+				<div class="col-xs-12 col-sm-7 col-sm-pull-5">
+					<p>Text about KC Cleaners site.</p>
+					<p>Text about KC Cleaners site.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fl-hoh">
+		<div class="container feather">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>🏠House of Hues (Rails)</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-5 col-sm-push-7">
+					<img src="img/hoh.jpg" alt="Screenshot of House of Hues" class="img-responsive" />
+				</div>
+				<div class="col-xs-12 col-sm-7 col-sm-pull-5">
+					<p>Text about House of Hues site.</p>
+					<p>Text about House of Hues site.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fl-tictactoe">
+		<div class="container feather">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1>🏆TicTacToe (Javascript)</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-5 col-sm-push-7">
+					<img src="img/magicjays.jpg" alt="Screenshot of MagicJays" class="img-responsive" />
+				</div>
+				<div class="col-xs-12 col-sm-7 col-sm-pull-5">
+					<p>Text about tictactoe site.</p>
+					<p>Text about tictactoe site.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="container-fluid" id="spacey">
 		<div id="stars">
@@ -41,7 +143,7 @@
 				</div>
 				<div id="home-text-bottom">
 					<h1>UX & Front-End Developer</h1>
-					<h2>// Portfolio coming soon</h2>
+					<a href="#" data-featherlight="#fl-aboutme"><span>$(this).click(read about me);</span></a>
 				</div>
 			</div>
 		</div>
