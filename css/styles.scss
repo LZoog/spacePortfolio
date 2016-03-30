@@ -46,8 +46,10 @@ strong {
   border: none;
 }
 
-div.navbar-header {
-  border-bottom: none;
+div.navbar-collapse {
+  margin-top: 10px;
+  border-top: none;
+
 }
 
 .no-transition {
@@ -101,23 +103,21 @@ header {
       transform: rotate(90deg);
     }
 
-    img {
-
-      &:hover {
-        opacity: .65;
-        filter: alpha(opacity=65); //IE8
-      }
+    img:hover {
+      opacity: .65;
+      filter: alpha(opacity=65); //IE8
     }
   }
 
   #project-icons {
     text-align: center;
+    margin-top: -3px;
 
     img {
-      padding-top:30px;
+      padding-top: 30px;
 
-      &:not(:nth-of-type(4))  {
-        margin-right: 2px;
+      &:not(:nth-of-type(4)) {
+        margin-right: 3px;
       }
     }
 

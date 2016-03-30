@@ -41,8 +41,9 @@ strong {
   background: none;
   border: none; }
 
-div.navbar-header {
-  border-bottom: none; }
+div.navbar-collapse {
+  margin-top: 10px;
+  border-top: none; }
 
 .no-transition {
   -webkit-transition: height 0.01s;
@@ -88,11 +89,12 @@ header {
       opacity: .65;
       filter: alpha(opacity=65); }
   header #project-icons {
-    text-align: center; }
+    text-align: center;
+    margin-top: -3px; }
     header #project-icons img {
       padding-top: 30px; }
       header #project-icons img:not(:nth-of-type(4)) {
-        margin-right: 2px; }
+        margin-right: 3px; }
     header #project-icons a {
       display: inline;
       color: #c088a8;
