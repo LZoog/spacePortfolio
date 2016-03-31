@@ -12,7 +12,7 @@ $(function(){
     }
   );
   $('#p3').hover(function() {
-      $('#p3 p').html("&nbsp; &nbsp;(Rails)");
+      $('#p3 p').html("&nbsp; &nbsp; (Rails)");
     }, function() {
       $('#p3 p').html("&nbsp; &nbsp; &nbsp;HoH");
     }

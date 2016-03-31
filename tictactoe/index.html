@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="text-center">
+    <div class="container-fluid">
+      <header class="row">
+        <div class="col-xs-12">
+          <h1><span class="curly">{</span> <span class="hidden-xs">The Most Epic </span>Tic Tac Toe<span class="hidden-xs"> Ever</span> <span class="curly">}</span></h1>
+        </div>
+      </header>
+    </div>
+
+    <div class="container">
+      <div class="row content">
+        <div class="col-xs-12 col-sm-3 p-pref">
+          <p>Click to change theme:</p>
+          <img src="img/x.png" id="default" height="40" width="40" alt="Default" />
+          <img src="img/pkmn.png" id="pkmn" alt="Pokemon" />
+          <img src="img/bb.png" id="bb" alt="Breaking Bad" />
+          <img src="img/dbz.png" id="dbz" alt="Dragonball Z" />
+          <p id="theme-msg">Current theme: Default</p>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div id="board">
+            <div class="board-square border-rb" id="a"></div>
+            <div class="board-square border-rb" id="b"></div>
+            <div class="board-square border-b" id="c"></div>
+            <div class="board-square border-rb" id="d"></div>
+            <div class="board-square border-rb" id="e"></div>
+            <div class="board-square border-b" id="f"></div>
+            <div class="board-square border-r" id="g"></div>
+            <div class="board-square border-r" id="h"></div>
+            <div class="board-square" id="i"></div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 p-wins">
+          <p id="pMove">Your move, Player 1.</p>
+          <p>P1 wins: <span id="p1Wins"></span></p>
+          <span class="visible-xs-inline">||</span>
+          <p>P2 wins: <span id="p2Wins"></span></p>
+          <input type="submit" value="reset" id="reset" />
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden-xs container-fluid">
+      <footer class="row">
+        <div class="col-sm-12">
+          <p>Made with love &hearts;</p>
+          <p>by Lauren Zugai</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous" /></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

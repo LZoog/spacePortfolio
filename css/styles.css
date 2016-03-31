@@ -34,8 +34,7 @@ h1, h2 {
   white-space: nowrap; }
 
 strong {
-  color: #c088a8;
-  text-shadow: 1px 1px 3px #15142d; }
+  color: #8e4f73; }
 
 .navbar {
   background: none;
@@ -124,18 +123,32 @@ header {
 
 div[id^="fl-"] {
   display: none;
-  background-color: #292c4f;
+  background-color: #f4edf5;
   padding: 0 10px 10px 10px; }
 
+.featherlight-close-icon.featherlight-close {
+  font-size: 2.3em;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(180, 40, 90, 0.2);
+  color: #f4edf5;
+  text-shadow: 0px 0px 3px #15142d; }
+  .featherlight-close-icon.featherlight-close:hover {
+    background-color: rgba(180, 40, 90, 0.3); }
+
+.featherlight .featherlight-close-icon {
+  line-height: 45px;
+  box-shadow: 0px 0px 3px #15142d; }
 .featherlight .featherlight-content {
   background: url(../img/stars.png); }
 
 .featherlight-inner {
   border-radius: 10px;
-  border: 2px dotted #f4edf5; }
+  border: 3px dotted #c088a8; }
 
 .feather {
   max-width: 800px;
+  box-sizing: border-box;
   padding: 10px 25px 15px; }
   .feather img:not(.hat) {
     width: 75%;
@@ -150,16 +163,15 @@ div[id^="fl-"] {
     white-space: normal;
     word-wrap: break-word;
     text-align: center;
-    color: #c088a8;
+    color: #4f558e;
     font-size: 2em;
     border-bottom: 1px solid #4f558e;
     padding-bottom: 12px;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 3px #15142d; }
+    margin-bottom: 20px; }
   .feather p {
     font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier;
     font-size: 1.1em;
-    color: #f4edf5; }
+    color: #15142d; }
 
 .featherlight:last-of-type {
   background: rgba(0, 0, 0, 0.65); }
@@ -293,6 +305,10 @@ div[id^="fl-"] {
     float: right; }
     header #project-icons img:not(:nth-of-type(4)) {
       margin-right: 8px; }
+
+  .featherlight-close-icon.featherlight-close {
+    right: 25px;
+    top: 25px; }
 
   .feather h1 {
     font-size: 3em; }
