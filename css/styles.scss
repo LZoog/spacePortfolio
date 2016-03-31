@@ -49,7 +49,6 @@ strong {
 div.navbar-collapse {
   margin-top: 10px;
   border-top: none;
-
 }
 
 .no-transition {
@@ -87,9 +86,10 @@ header {
   #link-icons {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 8px;
 
     span {
+      pointer-events: none;
       position: relative;
       top: 12px;
       letter-spacing: 3px;
@@ -131,7 +131,7 @@ header {
         text-decoration: none;
         opacity: .65;
         filter: alpha(opacity=65); //IE8
-        color: $light-purp;
+        color: turquoise;
       }
 
       p {
@@ -170,6 +170,7 @@ div[id^="fl-"] {
 
 .feather {
   max-width: 800px;
+  padding: 10px 25px 15px;
 
   img:not(.hat) {
     width: 75%;
@@ -191,8 +192,8 @@ div[id^="fl-"] {
     color: $light-pink;
     font-size: 2em;
     border-bottom: 1px solid $light-purp;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
     text-shadow: 1px 1px 3px $dark-purp;
   }
 
@@ -290,8 +291,8 @@ div[id^="fl-"] {
     margin-top: 0;
     position: relative;
     font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier;
-    font-size: 5.75vm;
-    font-size: 5.75vmin;
+    font-size: 5.45vm;
+    font-size: 5.45vmin;
 
     &:hover {
       opacity: .9;
@@ -359,10 +360,10 @@ div[id^="fl-"] {
     #link-icons {
       position: static;
       float: left;
-      margin-top: -7px;
+      margin-top: -12px;
     }
     #project-icons {
-      margin-top: -12px;
+      margin-top: -18px;
       float: right;
 
       img:not(:nth-of-type(4)) {

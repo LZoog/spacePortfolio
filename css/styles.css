@@ -72,8 +72,9 @@ header {
   header #link-icons {
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 8px; }
     header #link-icons span {
+      pointer-events: none;
       position: relative;
       top: 12px;
       letter-spacing: 3px;
@@ -104,7 +105,7 @@ header {
         text-decoration: none;
         opacity: .65;
         filter: alpha(opacity=65);
-        color: #4f558e; }
+        color: turquoise; }
       header #project-icons a p {
         position: absolute;
         top: -16px;
@@ -134,7 +135,8 @@ div[id^="fl-"] {
   border: 2px dotted #f4edf5; }
 
 .feather {
-  max-width: 800px; }
+  max-width: 800px;
+  padding: 10px 25px 15px; }
   .feather img:not(.hat) {
     width: 75%;
     margin: 0 auto;
@@ -151,8 +153,8 @@ div[id^="fl-"] {
     color: #c088a8;
     font-size: 2em;
     border-bottom: 1px solid #4f558e;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
     text-shadow: 1px 1px 3px #15142d; }
   .feather p {
     font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier;
@@ -226,8 +228,8 @@ div[id^="fl-"] {
     margin-top: 0;
     position: relative;
     font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier;
-    font-size: 5.75vm;
-    font-size: 5.75vmin; }
+    font-size: 5.45vm;
+    font-size: 5.45vmin; }
     #home-text-bottom span:hover {
       opacity: .9;
       filter: alpha(opacity=90);
@@ -285,9 +287,9 @@ div[id^="fl-"] {
   header #link-icons {
     position: static;
     float: left;
-    margin-top: -7px; }
+    margin-top: -12px; }
   header #project-icons {
-    margin-top: -12px;
+    margin-top: -18px;
     float: right; }
     header #project-icons img:not(:nth-of-type(4)) {
       margin-right: 8px; }
