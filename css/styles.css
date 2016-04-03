@@ -33,7 +33,7 @@ h1, h2 {
   font-family: Georgia, Times, Times New Roman, serif;
   white-space: nowrap; }
 
-strong {
+strong, .pink {
   color: #8e4f73; }
 
 .navbar {
@@ -67,7 +67,9 @@ header {
   width: 100%;
   position: absolute;
   padding: 10px;
-  top: 0px; }
+  top: 0px;
+  -webkit-animation: slideDown 2s;
+  animation: slideDown 2s; }
   header #link-icons {
     position: absolute;
     top: 0;
@@ -138,7 +140,9 @@ div[id^="fl-"] {
 
 .featherlight .featherlight-close-icon {
   line-height: 45px;
-  box-shadow: 0px 0px 1px #15142d; }
+  border: 1px solid #c088a8;
+  top: 10px;
+  right: 10px; }
 .featherlight .featherlight-content {
   background: url(../img/stars.png); }
 
@@ -150,15 +154,30 @@ div[id^="fl-"] {
   max-width: 800px;
   box-sizing: border-box;
   padding: 10px 25px 15px; }
-  .feather img:not(.hat) {
+  .feather a img {
+    border: 2px dotted #f4edf5; }
+  .feather a:hover img {
+    border: 2px dotted #c088a8;
+    border-radius: 5px; }
+  .feather img:not(.hat):not(.resume):not(.gh) {
+    padding: 3px;
     width: 75%;
     margin: 0 auto;
     margin-bottom: 15px; }
+  .feather .gh {
+    padding: 2px; }
+    .feather .gh.astro {
+      float: left;
+      margin: 0 9px 9px 0; }
   .feather .hat {
     width: 50px;
     height: 50px;
     position: relative;
     top: -5px; }
+  .feather .resume {
+    padding: 2px;
+    float: right;
+    margin: 0 9px 9px; }
   .feather h1 {
     white-space: normal;
     word-wrap: break-word;
@@ -257,8 +276,18 @@ div[id^="fl-"] {
   letter-spacing: 1px;
   padding-left: 2px; }
 
-.pink {
-  color: #8e4f73; }
+#blackout {
+  visibility: hidden;
+  z-index: 2;
+  background-color: rgba(25, 20, 40, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.visibility {
+  visibility: visible !important; }
 
 @-webkit-keyframes twinkle {
   from {
@@ -292,6 +321,26 @@ div[id^="fl-"] {
     background-position: 0 0; }
   to {
     background-position: 949px 0px; } }
+@-webkit-keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); }
+  50% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); }
+  50% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
 @media all and (min-width: 768px) {
   #home-text-top {
     top: -20em; }
@@ -312,8 +361,17 @@ div[id^="fl-"] {
 
   .feather h1 {
     font-size: 3em; }
-  .feather img:not(.hat) {
-    width: 100%; } }
+  .feather img:not(.hat):not(.resume):not(.gh) {
+    width: 100%; }
+
+  #blackout {
+    display: none; } }
+@media all and (min-width: 767px) and (max-width: 1025px) {
+  .featherlight .featherlight-close-icon {
+    line-height: 45px;
+    border: 1px solid #c088a8;
+    top: 10px;
+    right: 10px; } }
 @media all and (max-width: 767px) and (orientation: landscape) {
   #home-text-top {
     top: -12em; }

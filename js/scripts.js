@@ -29,4 +29,8 @@ $(function(){
       $('#p5 p').html("&nbsp; &nbsp; astro");
     }
   );
+
+  $('.navbar-default .navbar-toggle').click(function(){
+    $('#blackout').toggleClass('visibility');
+  });
 });

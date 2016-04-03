@@ -36,7 +36,7 @@ h1, h2 {
   white-space: nowrap;
 }
 
-strong {
+strong, .pink {
   color: $pink;
 }
 
@@ -50,6 +50,7 @@ div.navbar-collapse {
   border-top: none;
 }
 
+//to disable bootstrap's animation
 .no-transition {
   -webkit-transition: height 0.01s;
   -moz-transition: height 0.01s;
@@ -81,6 +82,8 @@ header {
   position: absolute;
   padding: 10px;
   top: 0px;
+  -webkit-animation: slideDown 2s;
+  animation: slideDown 2s;
 
   #link-icons {
     position: absolute;
@@ -174,7 +177,9 @@ div[id^="fl-"] {
 .featherlight {
     .featherlight-close-icon {
       line-height: 45px;
-      box-shadow: 0px 0px 1px $dark-purp;
+      border: 1px solid $light-pink;
+      top: 10px;
+      right: 10px;
    }
    .featherlight-content {
     background: url(../img/stars.png);
@@ -191,10 +196,28 @@ div[id^="fl-"] {
   box-sizing: border-box;
   padding: 10px 25px 15px;
 
-  img:not(.hat) {
+  a img {
+    border: 2px dotted $off-white;
+  }
+
+  a:hover img {
+    border: 2px dotted $light-pink;
+    border-radius: 5px;
+  }
+
+  img:not(.hat):not(.resume):not(.gh) {
+    padding: 3px;
     width: 75%;
     margin: 0 auto;
     margin-bottom: 15px;
+  }
+
+  .gh {
+    padding: 2px;
+    &.astro {
+      float: left;
+      margin: 0 9px 9px 0;
+    }
   }
 
   .hat {
@@ -202,6 +225,12 @@ div[id^="fl-"] {
     height: 50px;
     position: relative;
     top: -5px;
+  }
+
+  .resume {
+    padding: 2px;
+    float: right;
+    margin: 0 9px 9px;
   }
 
   h1 {
@@ -327,15 +356,25 @@ div[id^="fl-"] {
   }
 }
 
-
 .pixel {
   font-family: 'munroregular';
   letter-spacing: 1px;
   padding-left: 2px;
 }
 
-.pink {
-  color: $pink;
+#blackout {
+  visibility: hidden;
+  z-index: 2;
+  background-color: rgba(25, 20, 40, .8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.visibility {
+  visibility: visible!important;
 }
 
 //* animations *
@@ -365,8 +404,18 @@ div[id^="fl-"] {
   from {background-position: 0 0;}
   to {background-position: 949px 0px;}
 }
-//***
 
+@-webkit-keyframes slideDown {
+  0% {opacity: 0; transform: translate3d(0, -100%, 0);}
+  50% {opacity: 0; transform: translate3d(0, -100%, 0);}
+  100% {opacity: 1; transform: none;}
+}
+@keyframes slideDown {
+  0% {opacity: 0; transform: translate3d(0, -100%, 0);}
+  50% {opacity: 0; transform: translate3d(0, -100%, 0);}
+  100% {opacity: 1; transform: none;}
+}
+//***
 
 //* media queries *
 //larger than mobile
@@ -398,9 +447,22 @@ div[id^="fl-"] {
     h1 {
       font-size: 3em;
     }
-    img:not(.hat) {
+    img:not(.hat):not(.resume):not(.gh) {
       width: 100%;
     }
+  }
+
+  #blackout {
+    display: none;
+  }
+}
+//weird featherlight dimensions
+@media all and (min-width: 767px) and (max-width: 1025px) {
+  .featherlight .featherlight-close-icon {
+    line-height: 45px;
+    border: 1px solid $light-pink;
+    top: 10px;
+    right: 10px;
   }
 }
 //landscape mobile
