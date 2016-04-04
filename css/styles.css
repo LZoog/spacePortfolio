@@ -74,7 +74,7 @@ header {
     position: absolute;
     top: 0;
     left: 8px; }
-    header #link-icons span {
+    header #link-icons .asterisk {
       pointer-events: none;
       position: relative;
       top: 12px;
