@@ -87,9 +87,13 @@ header {
       -ms-transform: rotate(90deg);
       -webkit-transform: rotate(90deg);
       transform: rotate(90deg); }
-    header #link-icons img:hover {
-      opacity: .65;
-      filter: alpha(opacity=65); }
+    header #link-icons img {
+      width: 50px;
+      height: auto;
+      margin: 0 2px; }
+      header #link-icons img:hover {
+        opacity: .65;
+        filter: alpha(opacity=65); }
   header #project-icons {
     text-align: center;
     margin-top: -3px; }
@@ -154,9 +158,15 @@ div[id^="fl-"] {
   max-width: 800px;
   box-sizing: border-box;
   padding: 10px 25px 15px; }
-  .feather a img {
+  .feather ::selection {
+    background: turquoise;
+    /* WebKit/Blink Browsers */ }
+  .feather ::-moz-selection {
+    background: turquoise;
+    /* Gecko Browsers */ }
+  .feather a img:not(.resume), .feather .resume-block {
     border: 2px dotted #f4edf5; }
-  .feather a:hover img {
+  .feather a:hover img:not(.resume), .feather a:hover.resume-block {
     border: 2px dotted #c088a8;
     border-radius: 5px; }
   .feather img:not(.hat):not(.resume):not(.gh) {
@@ -165,7 +175,9 @@ div[id^="fl-"] {
     margin: 0 auto;
     margin-bottom: 15px; }
   .feather .gh {
-    padding: 2px; }
+    padding: 3px;
+    width: 60px;
+    height: auto; }
     .feather .gh.astro {
       float: left;
       margin: 0 9px 9px 0; }
@@ -174,10 +186,33 @@ div[id^="fl-"] {
     height: 50px;
     position: relative;
     top: -5px; }
-  .feather .resume {
-    padding: 2px;
+  .feather a:hover.resume-block {
+    text-decoration: none; }
+    .feather a:hover.resume-block span {
+      text-shadow: 0px 0px 1px turquoise; }
+  .feather .resume-block {
     float: right;
-    margin: 0 9px 9px; }
+    padding: 5px;
+    position: relative;
+    left: 10px; }
+    .feather .resume-block span {
+      position: relative;
+      left: 2px;
+      top: 1px;
+      color: #8e4f73;
+      font-family: 'munroregular';
+      font-size: .85em;
+      text-transform: uppercase;
+      font-smooth: never;
+      -webkit-font-smoothing: none;
+      -ms-transform: scale(1.25, 1);
+      /* IE 9 */
+      -webkit-transform: scale(1.25, 1);
+      /* Chrome, Safari, Opera */
+      transform: scale(1.25, 1); }
+  .feather .resume {
+    width: 60px;
+    height: auto; }
   .feather h1 {
     white-space: normal;
     word-wrap: break-word;
@@ -352,6 +387,9 @@ div[id^="fl-"] {
   header #project-icons {
     margin-top: -18px;
     float: right; }
+    header #project-icons img {
+      width: 50px;
+      height: auto; }
     header #project-icons img:not(:nth-of-type(4)) {
       margin-right: 8px; }
 
