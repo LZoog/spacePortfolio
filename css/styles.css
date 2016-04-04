@@ -394,6 +394,7 @@ div[id^="fl-"] {
       margin-right: 8px; }
 
   .featherlight-close-icon.featherlight-close {
+    border-radius: 0 8px 0 0;
     right: 25px;
     top: 25px; }
 
