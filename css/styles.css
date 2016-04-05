@@ -101,7 +101,7 @@ header {
       width: 50px;
       height: auto;
       padding-top: 30px; }
-      header #project-icons img:not(:nth-of-type(4)) {
+      header #project-icons img:not(:nth-of-type(5)) {
         margin-right: 3px; }
     header #project-icons a {
       display: inline;
