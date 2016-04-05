@@ -230,6 +230,10 @@ div[id^="fl-"] {
     width: 60px;
     height: auto;
 
+    &.bpost {
+      margin-left: -6px;
+    }
+
     &.astro {
       float: left;
       margin: 0 9px 9px 0;
