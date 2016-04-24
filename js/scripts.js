@@ -1,4 +1,13 @@
 $(function(){
+
+  $('#show-projects').click(function(){
+    $('#show-projects').css({"-webkit-animation": "slideRight .75s", "animation": "slideRight .75s"});
+    setTimeout(function() {
+      $('#show-projects').remove();
+      $('#project-icons').removeClass('hide');
+    }, 740);
+  });
+
   $('#p1').hover(function() {
       $('#p1 p').html("&nbsp;(Full site)");
     }, function() {
