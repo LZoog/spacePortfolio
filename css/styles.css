@@ -112,22 +112,24 @@ header {
       padding-top: 30px; }
       header #projects img:not(:nth-of-type(5)) {
         margin-right: 3px; }
-    header #projects #show-projects {
+    header #projects .projects-link {
       position: relative;
       top: 15px;
       font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier;
-      color: #0e8d8c;
-      font-size: 3vm;
-      font-size: 3vmin;
+      color: #f4edf5;
+      font-size: 5vm;
+      font-size: 5vmin;
       font-shadow: 1px 1px 3px black; }
-      header #projects #show-projects span {
-        font-size: 3.2vm;
-        font-size: 3.2vmin;
+      header #projects .projects-link#hide-projects {
+        position: relative;
+        top: 0;
+        float: right;
+        color: #0e8d8c; }
+      header #projects .projects-link .pulse {
         -webkit-animation: pulse 3s;
         animation: pulse 3s;
-        animation-delay: 2s;
         animation-iteration-count: infinite; }
-      header #projects #show-projects:hover {
+      header #projects .projects-link:hover {
         cursor: pointer;
         filter: alpha(opacity=65);
         opacity: .65; }
@@ -448,22 +450,40 @@ div[id^="fl-"] {
     transform: translate3d(100%, 0, 0); } }
 @-webkit-keyframes pulse {
   0% {
-    color: turquoise; }
+    color: #0e8d8c; }
   33% {
     color: #4f558e; }
   66% {
-    color: #8e4f73; }
+    color: #c088a8; }
   100% {
     color: turquoise; } }
 @keyframes pulse {
   0% {
-    color: turquoise; }
+    color: #0e8d8c; }
   33% {
     color: #4f558e; }
   66% {
-    color: #8e4f73; }
+    color: #c088a8; }
   100% {
     color: turquoise; } }
+@-webkit-keyframes pulse-bg {
+  0% {
+    text-shadow: 1px 1px 3px turquoise; }
+  33% {
+    text-shadow: 1px 1px 3px #c088a8; }
+  66% {
+    text-shadow: 1px 1px 3px #4f558e; }
+  100% {
+    text-shadow: 1px 1px 3px #0e8d8c; } }
+@keyframes pulse-bg {
+  0% {
+    text-shadow: 1px 1px 3px turquoise; }
+  33% {
+    text-shadow: 1px 1px 3px #c088a8; }
+  66% {
+    text-shadow: 1px 1px 3px #4f558e; }
+  100% {
+    text-shadow: 1px 1px 3px #0e8d8c; } }
 @media all and (min-width: 768px) {
   #home-text-top {
     top: -20em; }
@@ -477,6 +497,12 @@ div[id^="fl-"] {
     float: right; }
     header #projects img:not(:nth-of-type(4)) {
       margin-right: 8px; }
+    header #projects .show-projects {
+      font-size: 2.5vm;
+      font-size: 2.5vmin; }
+      header #projects .show-projects .pulse {
+        font-size: 2.8vm;
+        font-size: 2.8vmin; }
 
   .featherlight-close-icon.featherlight-close {
     right: 25px;

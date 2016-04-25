@@ -1,11 +1,28 @@
 $(function(){
 
   $('#show-projects').click(function(){
-    $('#show-projects').css({"-webkit-animation": "slideRight .75s", "animation": "slideRight .75s"});
+      $('#show-projects').css({"-webkit-animation": "slideRight .75s", "animation": "slideRight .75s"});
+      $('#hide-projects').css({"-webkit-animation": "slideLeft .75s", "animation": "slideLeft .75s"});
+      $('#project-icons').css({"-webkit-animation": "slideLeft .75s", "animation": "slideLeft .75s"});
+
     setTimeout(function() {
-      $('#show-projects').remove();
-      $('#project-icons').removeClass('hide');
+      $('#show-projects').toggleClass('hide');
+      $('#hide-projects').toggleClass('hide');
+      $('#project-icons').toggleClass('hide');
     }, 740);
+  });
+
+  $('#hide-projects').click(function(){
+      $('#show-projects').css({"-webkit-animation": "slideLeft .75s", "animation": "slideLeft .75s"});
+      $('#hide-projects').css({"-webkit-animation": "slideRight .75s", "animation": "slideRight .75s"});
+      $('#project-icons').css({"-webkit-animation": "slideRight .75s", "animation": "slideRight .75s"});
+
+    setTimeout(function() {
+      $('#show-projects').toggleClass('hide');
+      $('#hide-projects').toggleClass('hide');
+      $('#project-icons').toggleClass('hide');
+    }, 740);
+
   });
 
   $('#p1').hover(function() {

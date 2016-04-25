@@ -144,21 +144,26 @@ header {
       }
     }
 
-    #show-projects {
+    .projects-link {
+      //css animations in JS
       position: relative;
       top: 15px;
       font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier;
-      color: $dark-turq;
-      font-size: 3vm;
-      font-size: 3vmin;
+      color: $off-white;
+      font-size: 5vm;
+      font-size: 5vmin;
       font-shadow: 1px 1px 3px black;
 
-      span {
-        font-size: 3.2vm;
-        font-size: 3.2vmin;
+      &#hide-projects {
+        position: relative;
+        top: 0;
+        float: right;
+        color: $dark-turq;
+      }
+
+      .pulse {
         -webkit-animation: pulse 3s;
         animation: pulse 3s;
-        animation-delay: 2s;
         animation-iteration-count: infinite;
       }
 
@@ -536,30 +541,32 @@ div[id^="fl-"] {
   100% {opacity: 0; transform: translate3d(100%, 0, 0);}
 }
 
-// @-webkit-keyframes pulse {
-//   0% {-ms-transform: scale(1,1);-webkit-transform: scale(1,1); transform: scale(1,1);}
-//   50% {-ms-transform: scale(1.03,1.03);-webkit-transform: scale(1.03,1.03); transform: scale(1.03,1.03);}
-//   100% {-ms-transform: scale(1,1);-webkit-transform: scale(1,1); transform: scale(1,1);}
-// }
-//
-// @keyframes pulse {
-//   0% {-ms-transform: scale(1,1);-webkit-transform: scale(1,1); transform: scale(1,1);}
-//   50% {-ms-transform: scale(1.03,1.03);-webkit-transform: scale(1.03,1.03); transform: scale(1.03,1.03);}
-//   100% {-ms-transform: scale(1,1);-webkit-transform: scale(1,1); transform: scale(1,1);}
-// }
-
 @-webkit-keyframes pulse {
-  0% { color: $turq}
+  0% { color: $dark-turq;}
   33% {color: $light-purp;}
-  66% {color: $pink;}
+  66% {color: $light-pink;}
   100% {color: $turq;}
 }
 
 @keyframes pulse {
-  0% { color: $turq}
+  0% { color: $dark-turq;}
   33% {color: $light-purp;}
-  66% {color: $pink;}
+  66% {color: $light-pink;}
   100% {color: $turq;}
+}
+
+@-webkit-keyframes pulse-bg {
+  0% { text-shadow: 1px 1px 3px $turq;}
+  33% {text-shadow: 1px 1px 3px $light-pink;}
+  66% {text-shadow: 1px 1px 3px $light-purp;}
+  100% {text-shadow: 1px 1px 3px$dark-turq;}
+}
+
+@keyframes pulse-bg {
+  0% { text-shadow: 1px 1px 3px $turq;}
+  33% {text-shadow: 1px 1px 3px $light-pink;}
+  66% {text-shadow: 1px 1px 3px $light-purp;}
+  100% {text-shadow: 1px 1px 3px$dark-turq;}
 }
 
 //***
@@ -582,6 +589,16 @@ div[id^="fl-"] {
 
       img:not(:nth-of-type(4)) {
         margin-right: 8px;
+      }
+
+      .show-projects {
+        font-size: 2.5vm;
+        font-size: 2.5vmin;
+
+        .pulse {
+          font-size: 2.8vm;
+          font-size: 2.8vmin;
+        }
       }
     }
   }
