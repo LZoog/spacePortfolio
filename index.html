@@ -30,13 +30,18 @@
 				</button>
 			</div>
 			<div class="collapse navbar-collapse no-transition">
-				<div id="link-icons">
-					<!-- went with mail to link until I can code a form -->
-					<a href="mailto:?Subject=Where%20Have%20You%20Been%20All%20My%20Life%20?😙"><img src="img/icon-email.png" alt="E-mail" /></a><span class="asterisk">***</span>
-					<a href="https://www.linkedin.com/in/lzoog" target="_blank"><img src="img/icon-li.png" alt="Linked In" /></a>
-					<a href="https://github.com/LZoog" target="_blank"><img src="img/icon-gh.png" alt="Github" /></a>
-					<a href="http://www.lzoog.com" target="_blank"><img src="img/icon-blog.png" alt="Blog" /></a>
+				<div id="contact">
+					<p id="show-contacts" class="contacts-link"><span class="purp">self</span><span class="pink">.</span><span class="darkturq">setState</span>(<span class="grey">{</span><span class="pulse">CONTACT</span><span class="grey">:</span><span class="purp"> me</span><span class="grey">}</span>)<span class="grey">;</span></p>
+					<div id="contact-icons" class="hide">
+						<!-- went with mail to link until I can code a form -->
+						<a href="mailto:?Subject=Where%20Have%20You%20Been%20All%20My%20Life%20?😙"><img src="img/icon-email.png" alt="E-mail" /></a><span class="asterisk">***</span>
+						<a href="https://www.linkedin.com/in/lzoog" target="_blank"><img src="img/icon-li.png" alt="Linked In" /></a>
+						<a href="https://github.com/LZoog" target="_blank"><img src="img/icon-gh.png" alt="Github" /></a>
+						<a href="http://www.lzoog.com" target="_blank"><img src="img/icon-blog.png" alt="Blog" /></a>
+					</div>
+					<p id="hide-contacts" class="contacts-link hide"><span class="darkturq">return</span> <span class="grey"><</span><span class="pink">Link</span> <span class="turq i">url</span><span class="darkturq">=</span>{<span class="purp">home</span><span class="darkturq">.</span><span class="purp">page</span>} <span class="grey">/>;</span></p>
 				</div>
+
 				<div id="projects">
 					<p id="show-projects" class="projects-link pulse"><span class="darkturq">$</span>(<span class="purp">this</span>)<span class="pink">.</span><span class="darkturq">addClass</span>(<span class="grey">‘</span><span class="pulse">PROJECTS</span><span class="grey">’</span>)<span class="grey">;</span></p>
 					<div id="project-icons" class="hide">
@@ -46,7 +51,7 @@
 						<a href="#" data-featherlight="#fl-tictactoe" id="p4"><p>&nbsp; tictactoe</p><img src="img/icon-projects.png" alt="Project TicTacToe" /></a>
 						<a href="#" data-featherlight="#fl-portfolio" id="p5"><p>&nbsp; &nbsp; astro</p><img src="img/icon-projects.png" alt="Project SpacePortfolio" /></a>
 					</div>
-					<p id="hide-projects" class="projects-link pulse hide"><span class="darkturq">$</span>(<span class="purp">this</span>)<span class="pink">.</span><span class="darkturq">removeClass</span>(<span class="grey">‘</span><span class="purp">PROJECTS</span><span class="grey">’</span>)<span class="grey">;</span></a>
+					<p id="hide-projects" class="projects-link hide"><span class="darkturq">$</span>(<span class="purp">this</span>)<span class="pink">.</span><span class="darkturq">removeClass</span>(<span class="grey">‘</span><span class="purp">PROJECTS</span><span class="grey">’</span>)<span class="grey">;</span></a>
 				</div>
 			</div>
 		</div>

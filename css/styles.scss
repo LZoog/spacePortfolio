@@ -44,7 +44,14 @@ strong, .pink {
 
 .purp {
   color: #7772c0;
+}
 
+.turq {
+  color: $turq;
+
+  &.i {
+    font-style: italic;
+  }
 }
 .darkturq {
   color: $dark-turq;
@@ -99,7 +106,7 @@ header {
   -webkit-animation: slideDown 2s;
   animation: slideDown 2s;
 
-  #link-icons {
+  #contact {
     position: absolute;
     top: 0;
     left: 8px;
@@ -130,6 +137,11 @@ header {
     }
   }
 
+  .pulse {
+    -webkit-animation: pulse 6s infinite;
+    animation: pulse 6s infinite;
+  }
+
   #projects {
     text-align: center;
     margin-top: -3px;
@@ -144,64 +156,70 @@ header {
         margin-right: 3px;
       }
     }
+  }
 
-    .projects-link {
-      //css animations in JS
-      position: relative;
-      top: 15px;
-      font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier;
-      color: $off-white;
-      font-size: 5vm;
-      font-size: 5vmin;
-      font-shadow: 1px 1px 3px black;
+  .contacts-link {
+    //css animations in JS
+    position: relative;
+    top: 15px;
+    font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier;
+    color: $off-white;
+    font-size: 1.6em;
+    text-shadow: 1px 1px 2px black;
 
-      &#hide-projects {
-        float: right;
-        font-size: 1.1em;
-      }
-
-      .pulse {
-        -webkit-animation: pulse 6s infinite;
-        animation: pulse 6s infinite;
-      }
-
-      &:hover {
-        cursor: pointer;
-        filter: alpha(opacity=65); //IE8
-        opacity: .65;
-      }
+    &#hide-contacts {
+      float: left;
+      font-size: 1.1em;
     }
 
-    #project-icons {
+    &:hover {
+      cursor: pointer;
+      filter: alpha(opacity=65); //IE8
+      opacity: .65;
+    }
+  }
+
+  .projects-link {
+    @extend .contacts-link;
+
+    &#hide-projects {
+      float: right;
+      font-size: 1.1em;
     }
 
-    a {
-      display: inline;
-      color: $light-pink;
-      text-shadow: 1px 1px 2px black;
-      position: relative;
+    &:hover {
+      cursor: pointer;
+      filter: alpha(opacity=65); //IE8
+      opacity: .65;
+    }
+  }
 
-      &:hover {
-        text-decoration: none;
-        opacity: .65;
-        filter: alpha(opacity=65); //IE8
-        color: $turq;
-      }
+  a {
+    display: inline;
+    color: $light-pink;
+    text-shadow: 1px 1px 2px black;
+    position: relative;
 
-      p {
-        position: absolute;
-        top: -16px;
-        left: 0;
-        font-family: 'munroregular';
-        font-size: .85em;
-        text-transform: uppercase;
-        font-smooth: never;
-        letter-spacing: -.4px;
-        -webkit-font-smoothing : none;
-        -ms-transform: scale(1.25,1); /* IE 9 */
-        -webkit-transform: scale(1.25,1); /* Chrome, Safari, Opera */
-        transform: scale(1.25,1);
-      }
+    &:hover {
+      text-decoration: none;
+      opacity: .65;
+      filter: alpha(opacity=65); //IE8
+      color: $turq;
+    }
+
+    p {
+      position: absolute;
+      top: -16px;
+      left: 0;
+      font-family: 'munroregular';
+      font-size: .85em;
+      text-transform: uppercase;
+      font-smooth: never;
+      letter-spacing: -.4px;
+      -webkit-font-smoothing : none;
+      -ms-transform: scale(1.25,1); /* IE 9 */
+      -webkit-transform: scale(1.25,1); /* Chrome, Safari, Opera */
+      transform: scale(1.25,1);
     }
   }
 }
@@ -519,22 +537,40 @@ div[id^="fl-"] {
   100% {opacity: 1; transform: none;}
 }
 
-@-webkit-keyframes slideLeft {
+@-webkit-keyframes pSlideLeft {
   0% {opacity: 0; transform: translate3d(100%, 0, 0);}
   100% {opacity: 1; transform: none;}
 }
-@keyframes slideLeft {
+@keyframes pSlideLeft {
   0% {opacity: 0; transform: translate3d(100%, 0, 0);}
   100% {opacity: 1; transform: none;}
 }
 
-@-webkit-keyframes slideRight {
+@-webkit-keyframes pSlideRight {
   0% {opacity: 1; transform: translate3d(0, 0, 0);}
   100% {opacity: 0; transform: translate3d(100%, 0, 0);}
 }
-@keyframes slideRight {
+@keyframes pSlideRight {
   0% {opacity: 1; transform: translate3d(0, 0, 0);}
   100% {opacity: 0; transform: translate3d(100%, 0, 0);}
+}
+
+@-webkit-keyframes cSlideLeft {
+  0% {opacity: 0; transform: translate3d(-100%, 0, 0);}
+  100% {opacity: 1; transform: none;}
+}
+@keyframes cSlideLeft {
+  0% {opacity: 0; transform: translate3d(-100%, 0, 0);}
+  100% {opacity: 1; transform: none;}
+}
+
+@-webkit-keyframes cSlideRight {
+  0% {opacity: 1; transform: translate3d(0, 0, 0);}
+  100% {opacity: 0; transform: translate3d(-100%, 0, 0);}
+}
+@keyframes cSlideRight {
+  0% {opacity: 1; transform: translate3d(0, 0, 0);}
+  100% {opacity: 0; transform: translate3d(-100%, 0, 0);}
 }
 
 @-webkit-keyframes pulse {
@@ -566,7 +602,8 @@ div[id^="fl-"] {
     top: -20em;
   }
   header {
-    #link-icons {
+
+    #contact {
       position: static;
       float: left;
       margin-top: -12px;
@@ -577,16 +614,6 @@ div[id^="fl-"] {
 
       img:not(:nth-of-type(4)) {
         margin-right: 8px;
-      }
-
-      .projects-link {
-        font-size: 2.5vm;
-        font-size: 2.5vmin;
-
-        .pulse {
-          font-size: 2.8vm;
-          font-size: 2.8vmin;
-        }
       }
     }
   }

@@ -39,6 +39,11 @@ strong, .pink {
 .purp {
   color: #7772c0; }
 
+.turq {
+  color: turquoise; }
+  .turq.i {
+    font-style: italic; }
+
 .darkturq {
   color: #0e8d8c; }
 
@@ -79,11 +84,11 @@ header {
   top: 0px;
   -webkit-animation: slideDown 2s;
   animation: slideDown 2s; }
-  header #link-icons {
+  header #contact {
     position: absolute;
     top: 0;
     left: 8px; }
-    header #link-icons .asterisk {
+    header #contact .asterisk {
       pointer-events: none;
       position: relative;
       top: 12px;
@@ -96,13 +101,16 @@ header {
       -ms-transform: rotate(90deg);
       -webkit-transform: rotate(90deg);
       transform: rotate(90deg); }
-    header #link-icons img {
+    header #contact img {
       width: 50px;
       height: auto;
       margin: 0 2px; }
-      header #link-icons img:hover {
+      header #contact img:hover {
         opacity: .65;
         filter: alpha(opacity=65); }
+  header .pulse {
+    -webkit-animation: pulse 6s infinite;
+    animation: pulse 6s infinite; }
   header #projects {
     text-align: center;
     margin-top: -3px;
@@ -113,49 +121,52 @@ header {
       padding-top: 30px; }
       header #projects img:not(:nth-of-type(5)) {
         margin-right: 3px; }
-    header #projects .projects-link {
-      position: relative;
-      top: 15px;
-      font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier;
-      color: #f4edf5;
-      font-size: 5vm;
-      font-size: 5vmin;
-      font-shadow: 1px 1px 3px black; }
-      header #projects .projects-link#hide-projects {
-        float: right;
-        font-size: 1.1em; }
-      header #projects .projects-link .pulse {
-        -webkit-animation: pulse 6s infinite;
-        animation: pulse 6s infinite; }
-      header #projects .projects-link:hover {
-        cursor: pointer;
-        filter: alpha(opacity=65);
-        opacity: .65; }
-    header #projects a {
-      display: inline;
-      color: #c088a8;
-      text-shadow: 1px 1px 2px black;
-      position: relative; }
-      header #projects a:hover {
-        text-decoration: none;
-        opacity: .65;
-        filter: alpha(opacity=65);
-        color: turquoise; }
-      header #projects a p {
-        position: absolute;
-        top: -16px;
-        left: 0;
-        font-family: 'munroregular';
-        font-size: .85em;
-        text-transform: uppercase;
-        font-smooth: never;
-        letter-spacing: -.4px;
-        -webkit-font-smoothing: none;
-        -ms-transform: scale(1.25, 1);
-        /* IE 9 */
-        -webkit-transform: scale(1.25, 1);
-        /* Chrome, Safari, Opera */
-        transform: scale(1.25, 1); }
+  header .contacts-link, header .projects-link {
+    position: relative;
+    top: 15px;
+    font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier;
+    color: #f4edf5;
+    font-size: 1.6em;
+    text-shadow: 1px 1px 2px black; }
+    header .contacts-link#hide-contacts, header #hide-contacts.projects-link {
+      float: left;
+      font-size: 1.1em; }
+    header .contacts-link:hover, header .projects-link:hover {
+      cursor: pointer;
+      filter: alpha(opacity=65);
+      opacity: .65; }
+  header .projects-link#hide-projects {
+    float: right;
+    font-size: 1.1em; }
+  header .projects-link:hover {
+    cursor: pointer;
+    filter: alpha(opacity=65);
+    opacity: .65; }
+  header a {
+    display: inline;
+    color: #c088a8;
+    text-shadow: 1px 1px 2px black;
+    position: relative; }
+    header a:hover {
+      text-decoration: none;
+      opacity: .65;
+      filter: alpha(opacity=65);
+      color: turquoise; }
+    header a p {
+      position: absolute;
+      top: -16px;
+      left: 0;
+      font-family: 'munroregular';
+      font-size: .85em;
+      text-transform: uppercase;
+      font-smooth: never;
+      letter-spacing: -.4px;
+      -webkit-font-smoothing: none;
+      -ms-transform: scale(1.25, 1);
+      /* IE 9 */
+      -webkit-transform: scale(1.25, 1);
+      /* Chrome, Safari, Opera */
+      transform: scale(1.25, 1); }
 
 div[id^="fl-"] {
   display: none;
@@ -415,34 +426,62 @@ div[id^="fl-"] {
   100% {
     opacity: 1;
     transform: none; } }
-@-webkit-keyframes slideLeft {
+@-webkit-keyframes pSlideLeft {
   0% {
     opacity: 0;
     transform: translate3d(100%, 0, 0); }
   100% {
     opacity: 1;
     transform: none; } }
-@keyframes slideLeft {
+@keyframes pSlideLeft {
   0% {
     opacity: 0;
     transform: translate3d(100%, 0, 0); }
   100% {
     opacity: 1;
     transform: none; } }
-@-webkit-keyframes slideRight {
+@-webkit-keyframes pSlideRight {
   0% {
     opacity: 1;
     transform: translate3d(0, 0, 0); }
   100% {
     opacity: 0;
     transform: translate3d(100%, 0, 0); } }
-@keyframes slideRight {
+@keyframes pSlideRight {
   0% {
     opacity: 1;
     transform: translate3d(0, 0, 0); }
   100% {
     opacity: 0;
     transform: translate3d(100%, 0, 0); } }
+@-webkit-keyframes cSlideLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+@keyframes cSlideLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+@-webkit-keyframes cSlideRight {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); }
+  100% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); } }
+@keyframes cSlideRight {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); }
+  100% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); } }
 @-webkit-keyframes pulse {
   0% {
     color: #0e8d8c; }
@@ -477,7 +516,7 @@ div[id^="fl-"] {
   #home-text-top {
     top: -20em; }
 
-  header #link-icons {
+  header #contact {
     position: static;
     float: left;
     margin-top: -12px; }
@@ -486,12 +525,6 @@ div[id^="fl-"] {
     float: right; }
     header #projects img:not(:nth-of-type(4)) {
       margin-right: 8px; }
-    header #projects .projects-link {
-      font-size: 2.5vm;
-      font-size: 2.5vmin; }
-      header #projects .projects-link .pulse {
-        font-size: 2.8vm;
-        font-size: 2.8vmin; }
 
   .featherlight-close-icon.featherlight-close {
     right: 25px;
