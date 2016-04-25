@@ -1,29 +1,29 @@
 $(function(){
 
   $('#show-projects').click(function(){
-      $('#show-projects').css({"-webkit-animation": "slideRight .75s", "animation": "slideRight .75s"});
-      $('#hide-projects').css({"-webkit-animation": "slideLeft .75s", "animation": "slideLeft .75s"});
-      $('#project-icons').css({"-webkit-animation": "slideLeft .75s", "animation": "slideLeft .75s"});
-
-    setTimeout(function() {
-      $('#show-projects').toggleClass('hide');
-      $('#hide-projects').toggleClass('hide');
-      $('#project-icons').toggleClass('hide');
-    }, 740);
+    projectView('slideRight', 'slideLeft', 'slideLeft');
   });
 
   $('#hide-projects').click(function(){
-      $('#show-projects').css({"-webkit-animation": "slideLeft .75s", "animation": "slideLeft .75s"});
-      $('#hide-projects').css({"-webkit-animation": "slideRight .75s", "animation": "slideRight .75s"});
-      $('#project-icons').css({"-webkit-animation": "slideRight .75s", "animation": "slideRight .75s"});
-
-    setTimeout(function() {
-      $('#show-projects').toggleClass('hide');
-      $('#hide-projects').toggleClass('hide');
-      $('#project-icons').toggleClass('hide');
-    }, 740);
+    projectView('slideLeft', 'slideRight', 'slideRight');
 
   });
+
+  function projectView(a1, a2, a3) {
+    projectCss('#show-projects', a1);
+    projectCss('#hide-projects', a2);
+    projectCss('#project-icons', a3);
+
+    setTimeout(function() {
+    $('#show-projects').toggleClass('hide');
+    $('#hide-projects').toggleClass('hide');
+    $('#project-icons').toggleClass('hide');
+    }, 749);
+  };
+
+  function projectCss(id, animation) {
+    $(id).css({'-webkit-animation': animation + ' .75s', 'animation': animation + '  .75s'});
+  }
 
   $('#p1').hover(function() {
       $('#p1 p').html("&nbsp;(Full site)");

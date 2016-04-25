@@ -133,6 +133,7 @@ header {
   #projects {
     text-align: center;
     margin-top: -3px;
+    margin-bottom: 18px;
 
     img {
       width: 50px;
@@ -155,16 +156,13 @@ header {
       font-shadow: 1px 1px 3px black;
 
       &#hide-projects {
-        position: relative;
-        top: 0;
         float: right;
-        color: $dark-turq;
+        font-size: 1.1em;
       }
 
       .pulse {
-        -webkit-animation: pulse 3s;
-        animation: pulse 3s;
-        animation-iteration-count: infinite;
+        -webkit-animation: pulse 6s infinite;
+        animation: pulse 6s infinite;
       }
 
       &:hover {
@@ -175,8 +173,6 @@ header {
     }
 
     #project-icons {
-      -webkit-animation: slideLeft 1.5s;
-      animation: slideLeft 1.5s;
     }
 
     a {
@@ -472,7 +468,7 @@ div[id^="fl-"] {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: 50px;
   left: 0;
 }
 
@@ -543,30 +539,22 @@ div[id^="fl-"] {
 
 @-webkit-keyframes pulse {
   0% { color: $dark-turq;}
-  33% {color: $light-purp;}
-  66% {color: $light-pink;}
-  100% {color: $turq;}
+  11% { color: $turq;}
+  32% { color: $light-purp;}
+  52% {color: $pink;}
+  69% {color: $light-pink;}
+  83% {color: $turq;}
+  100% {color: $dark-turq;}
 }
 
 @keyframes pulse {
   0% { color: $dark-turq;}
-  33% {color: $light-purp;}
-  66% {color: $light-pink;}
-  100% {color: $turq;}
-}
-
-@-webkit-keyframes pulse-bg {
-  0% { text-shadow: 1px 1px 3px $turq;}
-  33% {text-shadow: 1px 1px 3px $light-pink;}
-  66% {text-shadow: 1px 1px 3px $light-purp;}
-  100% {text-shadow: 1px 1px 3px$dark-turq;}
-}
-
-@keyframes pulse-bg {
-  0% { text-shadow: 1px 1px 3px $turq;}
-  33% {text-shadow: 1px 1px 3px $light-pink;}
-  66% {text-shadow: 1px 1px 3px $light-purp;}
-  100% {text-shadow: 1px 1px 3px$dark-turq;}
+  11% { color: $turq;}
+  32% { color: $light-purp;}
+  52% {color: $pink;}
+  69% {color: $light-pink;}
+  83% {color: $turq;}
+  100% {color: $dark-turq;}
 }
 
 //***
@@ -591,7 +579,7 @@ div[id^="fl-"] {
         margin-right: 8px;
       }
 
-      .show-projects {
+      .projects-link {
         font-size: 2.5vm;
         font-size: 2.5vmin;
 
