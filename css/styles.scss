@@ -61,6 +61,10 @@ strong, .pink {
   color: $grey;
 }
 
+.hidden-xs-down {
+  display: none;
+}
+
 .navbar {
   background: none;
   border: none;
@@ -133,7 +137,7 @@ header {
     }
 
     img {
-      width: 50px;
+      width: 55px;
       height: auto;
       margin: 0 2px;
       &:hover {
@@ -149,7 +153,7 @@ header {
     margin-bottom: 18px;
 
     img {
-      width: 50px;
+      width: 55px;
       height: auto;
       padding-top: 30px;
 
@@ -169,8 +173,10 @@ header {
     text-shadow: 0px 0px 2px black;
 
     &#hide-contacts {
-      float: left;
-      font-size: 1.1em;
+      position: absolute;
+      top: 20px;
+      left: 285px;
+      font-size: 1.3em;
     }
 
     &:hover {
@@ -182,6 +188,10 @@ header {
 
   .projects-link {
     @extend .contacts-link;
+
+    &.topedit {
+      top: 21px;
+    }
 
     &#hide-projects {
       float: right;
@@ -376,7 +386,7 @@ div[id^="fl-"] {
   overflow: hidden;
 
   #stars {
-    height: 60%;
+    height: 62.5%;
     background:$dark-purp url(../img/stars.png) repeat top center;
 
     #twinkle {
@@ -399,7 +409,6 @@ div[id^="fl-"] {
     animation: cloudsBack 100s linear infinite;
 
     #cloudsFront {
-
       position: relative;
       top: 70px;
       width: 100%;
@@ -599,6 +608,11 @@ div[id^="fl-"] {
 //* media queries *
 //larger than mobile
 @media all and (min-width: 768px){
+
+  .hidden-xs-down {
+    display: inline;
+  }
+
   #home-text-top {
     top: -20em;
   }
@@ -608,6 +622,13 @@ div[id^="fl-"] {
       position: static;
       float: left;
       margin-top: -12px;
+    }
+    .contacts-link#hide-contacts {
+      position: relative;
+      top: 15px;
+      left: 0;
+      float: left;
+      font-size: 1.1em;
     }
     #projects {
       margin-top: -18px;

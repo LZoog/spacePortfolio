@@ -50,6 +50,9 @@ strong, .pink {
 .grey {
   color: grey; }
 
+.hidden-xs-down {
+  display: none; }
+
 .navbar {
   background: none;
   border: none; }
@@ -107,7 +110,7 @@ header {
       -webkit-transform: rotate(90deg);
       transform: rotate(90deg); }
     header #contact img {
-      width: 50px;
+      width: 55px;
       height: auto;
       margin: 0 2px; }
       header #contact img:hover {
@@ -118,7 +121,7 @@ header {
     margin-top: -3px;
     margin-bottom: 18px; }
     header #projects img {
-      width: 50px;
+      width: 55px;
       height: auto;
       padding-top: 30px; }
       header #projects img:not(:nth-of-type(5)) {
@@ -131,12 +134,16 @@ header {
     font-size: 1.6em;
     text-shadow: 0px 0px 2px black; }
     header .contacts-link#hide-contacts, header #hide-contacts.projects-link {
-      float: left;
-      font-size: 1.1em; }
+      position: absolute;
+      top: 20px;
+      left: 285px;
+      font-size: 1.3em; }
     header .contacts-link:hover, header .projects-link:hover {
       cursor: pointer;
       filter: alpha(opacity=65);
       opacity: .65; }
+  header .projects-link.topedit {
+    top: 21px; }
   header .projects-link#hide-projects {
     float: right;
     font-size: 1.1em; }
@@ -283,7 +290,7 @@ div[id^="fl-"] {
   padding: 0;
   overflow: hidden; }
   #spacey #stars {
-    height: 60%;
+    height: 62.5%;
     background: #15142d url(../img/stars.png) repeat top center; }
     #spacey #stars #twinkle {
       height: 100%;
@@ -515,6 +522,9 @@ div[id^="fl-"] {
   100% {
     color: #0e8d8c; } }
 @media all and (min-width: 768px) {
+  .hidden-xs-down {
+    display: inline; }
+
   #home-text-top {
     top: -20em; }
 
@@ -522,6 +532,12 @@ div[id^="fl-"] {
     position: static;
     float: left;
     margin-top: -12px; }
+  header .contacts-link#hide-contacts, header #hide-contacts.projects-link {
+    position: relative;
+    top: 15px;
+    left: 0;
+    float: left;
+    font-size: 1.1em; }
   header #projects {
     margin-top: -18px;
     float: right; }
