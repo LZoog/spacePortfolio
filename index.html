@@ -30,8 +30,9 @@
 				</button>
 			</div>
 			<div class="collapse navbar-collapse no-transition">
+
 				<div id="contact">
-					<p id="show-contacts" class="contacts-link"><span class="purp">self</span><span class="pink">.</span><span class="darkturq">setState</span>(<span class="grey">{</span><span class="pulse">CONTACT</span><span class="grey">:</span><span class="purp"> me</span><span class="grey">}</span>)<span class="grey">;</span></p>
+					<p id="show-contacts" class="contacts-link">🌜<span class="purp">self</span><span class="pink">.</span><span class="darkturq">setState</span>(<span class="grey">{</span><span class="pulse">CONTACT</span><span class="grey">:</span><span class="purp"> me</span><span class="grey">}</span>)<span class="grey">;</span></p>
 					<div id="contact-icons" class="hide">
 						<!-- went with mail to link until I can code a form -->
 						<a href="mailto:?Subject=Where%20Have%20You%20Been%20All%20My%20Life%20?😙"><img src="img/icon-email.png" alt="E-mail" /></a><span class="asterisk">***</span>
@@ -39,11 +40,11 @@
 						<a href="https://github.com/LZoog" target="_blank"><img src="img/icon-gh.png" alt="Github" /></a>
 						<a href="http://www.lzoog.com" target="_blank"><img src="img/icon-blog.png" alt="Blog" /></a>
 					</div>
-					<p id="hide-contacts" class="contacts-link hide"><span class="darkturq">return</span> <span class="grey"><</span><span class="pink">Link</span> <span class="turq i">url</span><span class="darkturq">=</span>{<span class="purp">home</span><span class="darkturq">.</span><span class="purp">page</span>} <span class="grey">/>;</span></p>
+					<p id="hide-contacts" class="contacts-link hide"><span class="darkturq">return</span> { <span class="pink">go</span><span class="grey">: </span><span class="purp">this</span><span class="darkturq">.</span><span class="purp">state</span><span class="darkturq">.</span><span class="purp">home</span> }<span class="grey">;</span></p>
 				</div>
 
 				<div id="projects">
-					<p id="show-projects" class="projects-link pulse"><span class="darkturq">$</span>(<span class="purp">this</span>)<span class="pink">.</span><span class="darkturq">addClass</span>(<span class="grey">‘</span><span class="pulse">PROJECTS</span><span class="grey">’</span>)<span class="grey">;</span></p>
+					<p id="show-projects" class="projects-link"><span class="darkturq">$</span>(<span class="purp">this</span>)<span class="pink">.</span><span class="darkturq">addClass</span>(<span class="grey">‘</span><span class="pulse">PROJECTS</span><span class="grey">’</span>)<span class="grey">;</span>🌛</p>
 					<div id="project-icons" class="hide">
 						<a href="#" data-featherlight="#fl-magicjays" id="p1"><p>&nbsp; &nbsp; Magic</p><img src="img/icon-projects.png" alt="Project Magic" /></a>
 						<a href="#" data-featherlight="#fl-kccleaners" id="p2"><p>&nbsp;Dry Clean</p><img src="img/icon-projects.png" alt="Project KC Cleaners" /></a>
@@ -51,7 +52,7 @@
 						<a href="#" data-featherlight="#fl-tictactoe" id="p4"><p>&nbsp; tictactoe</p><img src="img/icon-projects.png" alt="Project TicTacToe" /></a>
 						<a href="#" data-featherlight="#fl-portfolio" id="p5"><p>&nbsp; &nbsp; astro</p><img src="img/icon-projects.png" alt="Project SpacePortfolio" /></a>
 					</div>
-					<p id="hide-projects" class="projects-link hide"><span class="darkturq">$</span>(<span class="purp">this</span>)<span class="pink">.</span><span class="darkturq">removeClass</span>(<span class="grey">‘</span><span class="purp">PROJECTS</span><span class="grey">’</span>)<span class="grey">;</span></a>
+					<p id="hide-projects" class="projects-link hide"><span class="darkturq">$</span>(<span class="purp">this</span>)<span class="pink">.</span><span class="darkturq">removeClass</span>(<span class="grey">‘</span><span class="purp">PROJECTS</span><span class="grey">’</span>)<span class="grey">;</span></p>
 				</div>
 			</div>
 		</div>
@@ -65,7 +66,7 @@
 			<div id="cloudsFront">
 			 <div id="home-text-top">
 					<h1>#Lauren.Zugai</h1>
-					<h2>{ I <span class="pink">love</span> perfecting <span class="pixel">pixels</span>. }</h2>
+					<h2><span class="grey">{</span> I <span class="pulse">♡</span> perfecting <span class="pixel">pixels</span>. <span class="grey">}</span></h2>
 				</div>
 				<div id="home-text-bottom">
 					<h1>UX & Front-End Developer</h1>
@@ -89,10 +90,13 @@
 					<img src="img/me.jpg" alt="Photo of Me" class="img-responsive" />
 				</div>
 				<div class="col-xs-12 col-sm-7">
-					<a href="resume.pdf" target="_blank" class="resume-block"><img src="img/resume.png" class="resume"><br><span>Resume (PDF)</span></a><p>Hello world. 🤓 The name's <strong>Lauren Zugai</strong>. I'm from Abilene, TX, but I call Austin, TX home.</p>
-					<p>I've been an aspiring web developer as long as I can remember. I love modern & responsive design, graphic manipulation, clean code, and front-end development. I enjoy creating unique user experiences by thinking out-of-the-box with what can be done with client-side code. After recently discovering that I also enjoy back-end development, I now dream of one day becoming the ultimate 🦄&nbsp;unicorn: a full-stack developer with front-end focus & a design aesthetic. (what a mouthful)</p>
-					<p>I am extremely <strong>detail-oriented</strong> & <strong>goal-oriented</strong>, I take initiative, I know how to meet deadlines, and I truly enjoy learning. I have a Bachelor's in Information Technology that I achieved in 3 years with honors, and I am currently a student in General Assembly's Web Development Immersion Program.</p>
-					<p>My other hobbies include weight lifting💪, watching Game of Thrones👑, and playing fetch with my dog. 🐕</p>
+					<a href="resume.pdf" target="_blank" class="resume-block"><img src="img/resume.png" class="resume"><br><span>Resume (PDF)</span></a><p>Some people like the Rubik's Cube, Sudoku, or word puzzles. <span class="darkturq">I like to code.</span></p>
+					<p>Hello world. 🤓 (There's a lot of information about me in that resume over derr. -->) The name's <strong>Lauren Zugai</strong>. I'm from Abilene, TX, but I call Austin, TX home.</p>
+					<p>Confession: I'm a little insane... I can code for crazy amounts of time without noticing because web developing is <strong>so much fun; I am in love. 💜</strong>. I've chosen to dedicate my life to learning progressively more advanced code and currently, my focus is on CSS3 animations, JavaScript/jQuery, and React.JS.</p>
+
+					<p><span class="darkturq">Long-term goals:</span> Point blank, I want to be one of the best. I want to contribute to meaningful open-source projects and also create my own. Although I gravitate toward the front-end, I dream of one day becoming the ultimate 🦄&nbsp;unicorn: a full-stack developer with front-end focus & a design aesthetic. (what a mouthful)</p>
+
+					<p>I start a Front-End Developer internship with Razorfish🐠 June 6th that ends August 15th. Wish me luck! 😁</p>
 				</div>
 			</div>
 		</div>

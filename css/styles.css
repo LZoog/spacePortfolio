@@ -77,6 +77,11 @@ div.navbar-collapse {
 button {
   background: none !important; }
 
+.pulse {
+  -webkit-animation: pulse 6s infinite;
+  animation: pulse 6s infinite;
+  text-shadow: 0px 0px 2px #3a3e6f; }
+
 header {
   width: 100%;
   position: absolute;
@@ -108,9 +113,6 @@ header {
       header #contact img:hover {
         opacity: .65;
         filter: alpha(opacity=65); }
-  header .pulse {
-    -webkit-animation: pulse 6s infinite;
-    animation: pulse 6s infinite; }
   header #projects {
     text-align: center;
     margin-top: -3px;
@@ -127,7 +129,7 @@ header {
     font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier;
     color: #f4edf5;
     font-size: 1.6em;
-    text-shadow: 1px 1px 2px black; }
+    text-shadow: 0px 0px 2px black; }
     header .contacts-link#hide-contacts, header #hide-contacts.projects-link {
       float: left;
       font-size: 1.1em; }
@@ -318,7 +320,7 @@ div[id^="fl-"] {
     font-size: 10vm;
     font-size: 10vmin; }
   #home-text-top h2 {
-    color: #7772c0;
+    color: #8e4f73;
     font-size: 7.5vm;
     font-size: 7.5vmin;
     margin-top: -10px; }
