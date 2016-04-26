@@ -11,6 +11,9 @@ $(function(){
   $('#show-projects').click(function(){
     conProjView('project','pSlideRight', 'pSlideLeft');
   });
+  $('.navbar-default .navbar-toggle').click(function(){
+    $('#blackout').toggleClass('visibility');
+  });
 
   function conProjView(conOrProj, a1, a2) {
     conProjCss('#show-'+conOrProj+'s', a1);
@@ -39,9 +42,5 @@ $(function(){
       $(id+' p').html(text2);
     })
   };
-
-  $('.navbar-default .navbar-toggle').click(function(){
-    $('#blackout').toggleClass('visibility');
-  });
 
 });
