@@ -5,7 +5,7 @@
 	<meta name="google-site-verification" content="IBNZfZ45plNXGHhGDT2SGVm24kbaYIV5BGEqdPSZm04" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="lauren zugai, web developer portfolio, austin, front-end developer, full-stack developer, web designer" />
+	<meta name="description" content="lauren zugai, web developer portfolio, austin tx, front-end developer, full-stack developer, web designer" />
 	<meta name="web_author" content="Lauren Zugai" />
 
 	<title>LZoog | WebDev Portfolio</title>
@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
 	<link href="http://cdn.rawgit.com/noelboss/featherlight/1.4.0/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.carousel.min.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -32,27 +33,27 @@
 			<div class="collapse navbar-collapse no-transition">
 
 				<div id="contact">
-					<p id="show-contacts" class="contacts-link">🌜<span class="purp">self</span><span class="pink">.</span><span class="darkturq">setState</span>(<span class="grey">{</span><span class="pulse">CONTACT</span><span class="grey">:</span><span class="purp"> me</span><span class="grey">}</span>)<span class="grey">;</span></p>
-					<div id="contact-icons" class="hide">
+            <p id="show-contacts" class="contacts-link">🌜<span class="darkturq">$</span>(<span class="purp i">portfolio</span>)<span class="pink">.</span><span class="darkturq">show</span>(<span class="grey">‘</span><span class="pulse">CONTACTS</span><span class="grey">’</span>)<span class="grey">;</span></p>
+						<div id="contact-icons" class="hide">
 						<!-- went with mail to link until I can code a form -->
 						<a href="mailto:lauren@zugai.com?Subject=Where%20Have%20You%20Been%20All%20My%20Life%20?😙"><img src="img/icon-email.png" alt="E-mail" /></a><span class="asterisk">***</span>
 						<a href="https://www.linkedin.com/in/lzoog" target="_blank"><img src="img/icon-li.png" alt="Linked In" /></a>
 						<a href="https://github.com/LZoog" target="_blank"><img src="img/icon-gh.png" alt="Github" /></a>
 						<a href="http://www.lzoog.com" target="_blank"><img src="img/icon-blog.png" alt="Blog" /></a>
 					</div>
-					<p id="hide-contacts" class="contacts-link hide"><span class="darkturq">return</span><span class="hidden-xs-down"> { <span class="pink">go</span><span class="grey">: </span><span class="purp">this</span><span class="darkturq">.</span><span class="purp">state</span><span class="darkturq">.</span><span class="purp">home</span> }</span><span class="grey">;</span></p>
+					<p id="hide-contacts" class="contacts-link hide"><span class="hidden-xs-down"><span class="darkturq">$</span>(<span class="purp">this</span>)<span class="pink">.</span><span class="darkturq">show</span>(<span class="grey">‘</span><span class="pink">HOME</span><span class="grey">’</span>)</span><span class="hidden-sm-up pink">return</span><span class="grey">;</span></p>
 				</div>
 
 				<div id="projects">
-					<p id="show-projects" class="projects-link topedit"><span class="darkturq">$</span>(<span class="purp">this</span>)<span class="pink">.</span><span class="darkturq">addClass</span>(<span class="grey">‘</span><span class="pulse">PROJECTS</span><span class="grey">’</span>)<span class="grey">;</span>🌛</p>
+					<p id="show-projects" class="projects-link topedit"><span class="darkturq">$</span>(<span class="purp">this</span>)<span class="pink">.</span><span class="darkturq">load</span>(<span class="grey">‘</span><span class="pulse">PROJECTS</span><span class="grey">’</span>)<span class="grey">;</span>🌛</p>
 					<div id="project-icons" class="hide">
-						<a href="#" data-featherlight="#fl-magicjays" id="p1"><p>&nbsp; &nbsp; Magic</p><img src="img/icon-projects.png" alt="Project Magic" /></a>
-						<a href="#" data-featherlight="#fl-kccleaners" id="p2"><p>&nbsp;Dry Clean</p><img src="img/icon-projects.png" alt="Project KC Cleaners" /></a>
-						<a href="#" data-featherlight="#fl-hoh" id="p3"><p>&nbsp; &nbsp; &nbsp;HoH</p><img src="img/icon-projects.png" alt="Project House of Hues" /></a>
-						<a href="#" data-featherlight="#fl-tictactoe" id="p4"><p>&nbsp; tictactoe</p><img src="img/icon-projects.png" alt="Project TicTacToe" /></a>
-						<a href="#" data-featherlight="#fl-portfolio" id="p5"><p>&nbsp; &nbsp; astro</p><img src="img/icon-projects.png" alt="Project SpacePortfolio" /></a>
+						<a href="#" data-featherlight="#fl-magicjays" id="p1"><p>&nbsp; &nbsp; &nbsp;Magic</p><img src="img/icon-projects-magic.png" alt="Project Magic" /></a>
+						<a href="#" data-featherlight="#fl-kccleaners" id="p2"><p>&nbsp; &nbsp;WTXLawn</p><img src="img/icon-projects.png" alt="Project West Texas Lawn" /></a>
+						<a href="#" data-featherlight="#fl-hoh" id="p3"><p>&nbsp; &nbsp; &nbsp; HoH</p><img src="img/icon-projects.png" alt="Project House of Hues" /></a>
+						<a href="#" data-featherlight="#fl-tictactoe" id="p4"><p>&nbsp; &nbsp;tictactoe</p><img src="img/icon-projects.png" alt="Project TicTacToe" /></a>
+						<a href="#" data-featherlight="#fl-portfolio" id="p5"><p>&nbsp; &nbsp; &nbsp;astro</p><img src="img/icon-projects.png" alt="Project SpacePortfolio" /></a>
 					</div>
-					<p id="hide-projects" class="projects-link hide"><span class="darkturq">$</span>(<span class="purp">this</span>)<span class="pink">.</span><span class="darkturq">removeClass</span>(<span class="grey">‘</span><span class="purp">PROJECTS</span><span class="grey">’</span>)<span class="grey">;</span></p>
+					<p id="hide-projects" class="projects-link hide"><span class="darkturq">$</span>(<span class="purp">this</span>)<span class="pink">.</span><span class="darkturq">unload</span>(<span class="grey">‘</span><span class="pink">PROJECTS</span><span class="grey">’</span>)<span class="grey">;</span></p>
 				</div>
 			</div>
 		</div>
@@ -87,16 +88,18 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-5">
-					<img src="img/me.jpg" alt="Photo of Me" class="img-responsive" />
+					<img src="img/me.jpg" alt="Photo of Me" class="img-responsive full-width" />
 				</div>
 				<div class="col-xs-12 col-sm-7">
-					<a href="resume.pdf" target="_blank" class="resume-block"><img src="img/resume.png" class="resume"><br><span>Resume (PDF)</span></a><p>Some people like the Rubik's Cube, Sudoku, or word puzzles. <span class="darkturq">I like to code.</span></p>
-					<p>Hello world. 🤓 (There's a lot of information about me in that resume over derr. -->) The name's <strong>Lauren Zugai</strong>. I'm from Abilene, TX, but I call Austin, TX home.</p>
-					<p>Confession: I'm a little insane... I can code for crazy amounts of time without noticing because web developing is <strong>so much fun; I am in love. 💜</strong>. I've chosen to dedicate my life to learning progressively more advanced code and currently, my focus is on CSS3 animations, JavaScript/jQuery, and React.JS.</p>
-
-					<p><span class="darkturq">Long-term goals:</span> Point blank, I want to be one of the best. I want to contribute to meaningful open-source projects and also create my own. Although I gravitate toward the front-end, I dream of one day becoming the ultimate 🦄&nbsp;unicorn: a full-stack developer with front-end focus & a design aesthetic. (what a mouthful)</p>
-
-					<p>I start a Front-End Developer internship with Razorfish🐠 June 6th that ends August 15th. Wish me luck! 😁</p>
+					<a href="resume.pdf" target="_blank" class="resume-block"><img src="img/resume.png" class="resume"><br><span>Resume (PDF)</span></a><p>Hello world. <span class="darkturq">I like to code. 👾</span></p>
+					<p>There's a lot of information about me in that resume over derr. 👉<br>The name's <strong>Lauren Zugai</strong>. I'm from Abilene, TX, but I call Austin💜, TX home. </p>
+					<p>My passion for web development began when I was around 13 and I first dabbled in HTML, CSS, & Photoshop. Development is <strong>so much fun</strong> and I aspire to progressively learn more advanced code and be one of the best.</p>
+					<p><span class="darkturq">#GOALS:</span> My current focus is on advancing my JavaScript & jQuery skills + thinking outside of the box when it comes to UI and dynamic elements {CSS animations are awesome}. Although I gravitate toward the front-end, I dream of one day becoming the ultimate <img src="img/unicorn.png" class="unicorn" alt="unicorn emoji">unicorn: a full-stack developer with front-end focus & a design aesthetic. {what a mouthful}</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<p>I'm a recent college & webdev bootcamp grad + currently a Front-End Developer intern @Razorfish🐠 with an end date of August 12th. I'm looking for a full-time position!</p>
 				</div>
 			</div>
 		</div>
@@ -117,7 +120,7 @@
 					<p><a href="https://github.com/LZoog/magicJays" target="_blank"><img src="img/icon-gh.png" class="gh"></a>
 					<a href="http://www.lzoog.com/2016/03/increasing-web-performance-time/" target="_blank"><img src="img/icon-blog.png" class="gh bpost"></a>
 					<a href="http://www.magicjays.com" target="_blank">www.magicjays.com<br>
-					<img src="img/magicjays.jpg" alt="Screenshot of MagicJays" class="img-responsive" /></a></p>
+					<img src="img/magicjays.jpg" alt="Screenshot of MagicJays" class="img-responsive full-width" /></a></p>
 					<p>(business did increase after launching! 😁)</p>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-sm-pull-6">
@@ -141,7 +144,7 @@
 				<div class="col-xs-12 col-sm-6 col-sm-push-6 text-center">
 					<p><a href="https://github.com/LZoog/kccleaners" target="_blank"><img src="img/icon-gh.png" class="gh"></a>
 					<a href="#" target="_blank">(no link, work in progress)<br>
-					<img src="img/kccleaners.jpg" alt="Screenshot of KC Cleaners" class="img-responsive" /></a></p>
+					<img src="img/kccleaners.jpg" alt="Screenshot of KC Cleaners" class="img-responsive full-width" /></a></p>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-sm-pull-6">
 					<p>Work in progress, should finish by Monday 4/11</p>
@@ -161,7 +164,7 @@
 				<div class="col-xs-12 col-sm-6 col-sm-push-6 text-center">
 					<p><a href="https://github.com/alisonmae/houseofhues" target="_blank"><img src="img/icon-gh.png" class="gh"></a>
 					<a href="https://glacial-spire-35214.herokuapp.com/" target="_blank">(Heroku takes 10-15 seconds to load)<br>
-					<img src="img/hoh.jpg" alt="Screenshot of House of Hues" class="img-responsive" /></a></p>
+					<img src="img/hoh.jpg" alt="Screenshot of House of Hues" class="img-responsive full-width" /></a></p>
 					<p>Features: user authentication, view all "looks" or search by color & room, passes color & room ID through the URL, ability to submit and delete looks, redirection if user tries to create a look or go to rooms without correct parameters, matching theme on color selection, "boost" capabilities for each look, top 3 looks and 3 newest looks on home page, clicking an email (in header or another user's) brings you to a user profile page displaying all uploaded looks by that user</p>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-sm-pull-6">
@@ -189,7 +192,7 @@
 				<div class="col-xs-12 col-sm-6 col-sm-push-6 text-center">
 					<p><a href="https://github.com/LZoog/spacePortfolio/tree/master/tictactoe" target="_blank"><img src="img/icon-gh.png" class="gh"></a>
 					<a href="http://www.zugai.com/tictactoe/" target="_blank">www.zugai.com/tictactoe<br>
-					<img src="img/tictactoe.jpg" alt="Screenshot of TicTacToe" class="img-responsive" /></a>
+					<img src="img/tictactoe.jpg" alt="Screenshot of TicTacToe" class="img-responsive full-width" /></a>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-sm-pull-6">
 					<p>This TicTacToe project was assigned in GA’s WDI bootcamp and really helped solidify some Javascript fundamentals. It was interesting to get themes to work!</p>
@@ -221,6 +224,7 @@
 	<script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	<script src="http://cdn.rawgit.com/noelboss/featherlight/1.4.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/owl.carousel.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>
