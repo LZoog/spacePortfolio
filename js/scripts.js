@@ -36,15 +36,17 @@ $(function(){
     $(id).css({'-webkit-animation': animation + ' .75s', 'animation': animation + '  .75s'});
   };
 
-  //id, text displayed on hover, text displayed normally, image displayed normally
-  projectHover('#p1', '&nbsp; (Full site)<br>test', $('#p1').text(), $('#p1 img').attr('src'));
-  projectHover('#p2', '&nbsp; (Full site)', $('#p2').text());
-  projectHover('#p3', '&nbsp; &nbsp; &nbsp;(Rails)', $('#p3').text());
-  projectHover('#p4', '&nbsp; &nbsp; &nbsp; (JS)', $('#p4').text());
-  projectHover('#p5', '&nbsp; (this site)', $('#p5').text());
+  //id, name, text displayed normally, text displayed on hover
+  projectHover('#p1', 'stylebags', $('#p1').text(), '&nbsp;[full/node.js]');
+  projectHover('#p2', 'hoh', $('#p2').text(), '&nbsp;[full/rails]');
+  projectHover('#p3', 'wtxlawn', $('#p3').text(), '&nbsp; [front-end]');
+  projectHover('#p4', 'magic', $('#p4').text(), '&nbsp; [front-end]');
+  projectHover('#p5', 'tictactoe', $('#p5').text(), '&nbsp; &nbsp; &nbsp; [JS]');
+  projectHover('#p6', 'astro', $('#p6').text(), '&nbsp; [portfolio]⭐️');
 
-  function projectHover(id, hoverText, activeText, activeImage) {
-    var hoverImage = 'img/icon-projects.png';
+  function projectHover(id, name, activeText, hoverText) {
+    var activeImage = 'img/icon-projects.png';
+    var hoverImage = 'img/icon-projects-'+name+'.png';
     $(id).hover(function() {
       $(id+' p').html(hoverText);
       $(id+' img').attr('src', hoverImage);
