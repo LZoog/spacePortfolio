@@ -47,12 +47,16 @@
 				<div id="projects">
 					<p id="show-projects" class="projects-link topedit"><span class="darkturq">$</span>(<span class="purp i">portfolio</span>)<span class="pink">.</span><span class="darkturq">load</span>(<span class="grey">‘</span><span class="pulse">PROJECTS</span><span class="grey">’</span>)<span class="grey">;</span>🌛</p>
 					<div id="project-icons" class="hide">
-						<a href="#" data-featherlight="#fl-stylebags" id="p1"><p>&nbsp; &nbsp;Stylebags</p><img src="img/icon-projects.png" alt="Project StyleBags" /></a>
-						<a href="#" data-featherlight="#fl-hoh" id="p2"><p>&nbsp; &nbsp; &nbsp; HoH</p><img src="img/icon-projects.png" alt="Project House of Hues" /></a>
-						<a href="#" data-featherlight="#fl-wtxlawn" id="p3"><p>&nbsp; &nbsp;WTXLawn</p><img src="img/icon-projects.png" alt="Project West Texas Lawn" /></a>
-						<a href="#" data-featherlight="#fl-magicjays" id="p4"><p>&nbsp; &nbsp; &nbsp;Magic</p><img src="img/icon-projects.png" alt="Project Magic" /></a>
-						<a href="#" data-featherlight="#fl-tictactoe" id="p5"><p>&nbsp; &nbsp;tictactoe</p><img src="img/icon-projects.png" alt="Project TicTacToe" /></a>
-						<a href="#" data-featherlight="#fl-portfolio" id="p6"><p>&nbsp; &nbsp; &nbsp;astro</p><img src="img/icon-projects.png" alt="Project SpacePortfolio" /></a>
+						<div id="left">↞hi</div>
+						<div id="carousel">
+							<a href="#" data-featherlight="#fl-stylebags" id="p1"><p>&nbsp; &nbsp;Stylebags</p><img src="img/icon-projects.png" alt="Project StyleBags" /></a>
+							<a href="#" data-featherlight="#fl-hoh" id="p2"><p>&nbsp; &nbsp; &nbsp; HoH</p><img src="img/icon-projects.png" alt="Project House of Hues" /></a>
+							<a href="#" data-featherlight="#fl-wtxlawn" id="p3"><p>&nbsp; &nbsp;WTXLawn</p><img src="img/icon-projects.png" alt="Project West Texas Lawn" /></a>
+							<a href="#" data-featherlight="#fl-magicjays" id="p4"><p>&nbsp; &nbsp; &nbsp;Magic</p><img src="img/icon-projects.png" alt="Project Magic" /></a>
+							<a href="#" data-featherlight="#fl-tictactoe" id="p5"><p>&nbsp; &nbsp;tictactoe</p><img src="img/icon-projects.png" alt="Project TicTacToe" /></a>
+							<a href="#" data-featherlight="#fl-portfolio" id="p6"><p>&nbsp; &nbsp; &nbsp;astro</p><img src="img/icon-projects.png" alt="Project SpacePortfolio" /></a>
+						</div>
+						<div id="right">↠hi</div>
 					</div>
 					<p id="hide-projects" class="projects-link hide"><span class="darkturq">$</span>(<span class="purp">this</span>)<span class="pink">.</span><span class="darkturq">unload</span>(<span class="grey">‘</span><span class="pink">PROJECTS</span><span class="grey">’</span>)<span class="grey">;</span></p>
 				</div>
@@ -167,7 +171,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-sm-push-6 text-center">
 					<p><a href="https://github.com/LZoog/wTXLawn" target="_blank"><img src="img/icon-gh.png" class="gh"></a>
-					<a href="http://www.zugai.com/wtxlawn/" target="_blank">www.zugai.com/wtxlawn<br>
+					<a href="http://www.westtexaslawn.com" target="_blank">www.westtexaslawn.com<br>
 					<img src="img/wtxlawn.jpg" alt="Screenshot of West Texas Lawn" class="img-responsive full-width" /></a></p>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-sm-pull-6">
@@ -243,6 +247,9 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Used to preload project hover icons, hidden in CSS -->
+	<div id="preload" class="none"></div>
 
 	<script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>

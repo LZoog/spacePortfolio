@@ -42,7 +42,7 @@ $(function(){
   projectHover('#p3', 'wtxlawn', $('#p3').text(), '&nbsp; [front-end]');
   projectHover('#p4', 'magic', $('#p4').text(), '&nbsp; [front-end]');
   projectHover('#p5', 'tictactoe', $('#p5').text(), '&nbsp; &nbsp; &nbsp; [JS]');
-  projectHover('#p6', 'astro', $('#p6').text(), '&nbsp; [portfolio]⭐️');
+  projectHover('#p6', 'astro', $('#p6').text(), '&nbsp; [portfolio]');
 
   function projectHover(id, name, activeText, hoverText) {
     var activeImage = 'img/icon-projects.png';
