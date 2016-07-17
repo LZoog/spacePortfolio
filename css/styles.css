@@ -195,6 +195,17 @@ header {
   filter: alpha(opacity=65);
   opacity: .65; }
 
+#carousel {
+  display: inline-block;
+  text-align: left;
+  width: 275px;
+  height: 100px;
+  overflow: hidden; }
+  #carousel-inner {
+    white-space: nowrap;
+    height: 120px;
+    overflow-x: scroll; }
+
 #left, #right {
   display: inline-block;
   color: white; }
@@ -568,8 +579,8 @@ div[id^="fl-"] {
     float: right; }
     header #projects img {
       width: 60px; }
-      header #projects img:not(:nth-of-type(4)) {
-        margin-right: 8px; }
+    header #projects a:not(:last-of-type) {
+      margin-right: 8px; }
 
   .featherlight-close-icon.featherlight-close {
     right: 25px;

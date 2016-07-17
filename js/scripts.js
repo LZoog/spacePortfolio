@@ -1,11 +1,6 @@
 $(function(){
 
-  //owl carousel
-  // $('.owl-carousel').owlCarousel({
-  //   items: 4
-  // });
-
-
+  // * VIEW/HIDE & ANIMATE CONTACT/PROJECTS *
   $('#hide-contacts').click(function(){
     conProjView('contact','cSlideLeft', 'cSlideRight');
   });
@@ -22,6 +17,7 @@ $(function(){
     $('#blackout').toggleClass('visibility');
   });
 
+  // call w/'contact' or 'project', animation when showing, animation when hiding
   function conProjView(conOrProj, a1, a2) {
     conProjCss('#show-'+conOrProj+'s', a1);
     conProjCss('#hide-'+conOrProj+'s', a2);
@@ -30,8 +26,10 @@ $(function(){
       $('#show-'+conOrProj+'s').toggleClass('hide');
       $('#hide-'+conOrProj+'s').toggleClass('hide');
       $('#'+conOrProj+'-icons').toggleClass('hide');
+      // hide @ 740 because animation is done in @ 750ms
     }, 740);
   }
+  // call w/ #show-contacts or #show-projects, & animation (either showing or hiding)
   function conProjCss(id, animation) {
     $(id).css({'-webkit-animation': animation + ' .75s', 'animation': animation + '  .75s'});
   };
@@ -55,5 +53,18 @@ $(function(){
       $(id+' img').attr('src', activeImage);
     });
   };
+
+
+  // * CAROUSEL *
+  $('#left').click(function(){
+    $('#carousel-inner').animate({
+      scrollLeft: "-=75px"
+    }, "fast");
+  });
+  $('#right').click(function(){
+    $('#carousel-inner').animate({
+      scrollLeft: "+=75px"
+    }, "fast");
+  });
 
 });
