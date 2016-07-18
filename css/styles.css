@@ -69,6 +69,10 @@ strong, .pink {
   text-shadow: 0px 0px 2px #3b3f6b;
   font-size: 1.2em; }
 
+.more {
+  -webkit-animation: more 1.5s infinite;
+  animation: more 1.5s infinite; }
+
 .pixel {
   font-family: 'munroregular';
   letter-spacing: 1px;
@@ -189,7 +193,8 @@ header {
   top: 21px; }
 .projects-link#hide-projects {
   float: right;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  top: 0px; }
 .projects-link:hover {
   cursor: pointer;
   filter: alpha(opacity=65);
@@ -198,17 +203,30 @@ header {
 #carousel {
   display: inline-block;
   text-align: left;
-  width: 275px;
+  width: 285px;
   height: 100px;
   overflow: hidden; }
   #carousel-inner {
+    padding-left: 5px;
     white-space: nowrap;
     height: 120px;
     overflow-x: scroll; }
 
 #left, #right {
   display: inline-block;
-  color: white; }
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  border: 3px solid #4f558e;
+  position: relative;
+  top: -20px; }
+  #left img, #right img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: -30px; }
+    #left img:hover, #right img:hover {
+      cursor: pointer; }
 
 div[id^="fl-"] {
   display: none;
@@ -550,6 +568,20 @@ div[id^="fl-"] {
     color: turquoise; }
   100% {
     color: #0e8d8c; } }
+@-webkit-keyframes more {
+  0% {
+    border-color: #4f558e; }
+  50% {
+    border-color: #c088a8; }
+  100% {
+    border-color: #4f558e; } }
+@keyframes more {
+  0% {
+    border-color: #4f558e; }
+  50% {
+    border-color: #c088a8; }
+  100% {
+    border-color: #4f558e; } }
 @media all and (min-width: 768px) {
   .hidden-xs-down {
     display: inline; }
@@ -576,10 +608,15 @@ div[id^="fl-"] {
       font-size: 1.1em; }
   header #projects {
     margin-top: -18px;
-    float: right; }
-    header #projects img {
-      width: 60px; }
-    header #projects a:not(:last-of-type) {
+    float: right;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    header #projects a img {
+      width: 60px;
       margin-right: 8px; }
 
   .featherlight-close-icon.featherlight-close {

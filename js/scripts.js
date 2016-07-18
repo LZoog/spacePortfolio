@@ -54,17 +54,70 @@ $(function(){
     });
   };
 
-
   // * CAROUSEL *
+  // for arrows animation; - 4 because of first 4 shown, 73.5 is the scrollLeft of one project; - 37px for middle of project
+  var maxScroll = (($('#carousel-inner a').length - 4) * 73.5) - 37;
+
+  // arrows animation
+  function arrows(){
+    var carouselScroll = $('#carousel-inner').scrollLeft();
+    if (carouselScroll <= 0) {
+      $('#left').removeClass('more');
+    // there are more projects to the left
+    } else if (carouselScroll >= 37) {
+      $('#left').addClass('more');
+    }
+    // if user is scrolled to the right max
+    if (carouselScroll >= maxScroll) {
+      $('#right').removeClass('more');
+    } else {
+      // there are more projects to the right
+      $('#right').addClass('more');
+    }
+  };
+
+  // right & left buttons
   $('#left').click(function(){
     $('#carousel-inner').animate({
-      scrollLeft: "-=75px"
-    }, "fast");
+      scrollLeft: "-=74px"
+    }, 200);
+    setTimeout(arrows, 210);
   });
   $('#right').click(function(){
     $('#carousel-inner').animate({
-      scrollLeft: "+=75px"
-    }, "fast");
+      scrollLeft: "+=74px"
+    }, 200);
+    setTimeout(arrows, 210);
+  });
+
+  // * draggable *
+  var mouseDownX, mouseX, drag = false;
+  // disable clicking & dragging image to save
+  $('#carousel-inner img').on('dragstart', false);
+
+  // enable dragging on mouse click
+  $('#carousel-inner, #carousel-inner a').mousedown(function(e){
+    $(this).css('cursor', 'ew-resize');
+    drag = true;
+    //current mouse x position - everything left of the div + scrollLeft of div
+    mouseDownX = e.pageX - this.offsetLeft + $('#carousel-inner').scrollLeft();
+  });
+  // disable dragging on mouse up
+  $(window).mouseup(function(){
+    $('#carousel-inner, #carousel-inner a').css('cursor', 'pointer');
+    drag = false;
+  });
+
+  // change scrollLeft on mousemove
+  $('#carousel-inner').mousemove(function(e){
+    if (drag === true) {
+      //current mouse x position - everything left of the div + scrollLeft of div
+      mouseX = e.pageX - this.offsetLeft + $('#carousel-inner').scrollLeft();
+      // get the difference between mouse x position on click & on drag
+      var diff = mouseDownX - mouseX;
+      $(this).scrollLeft($('#carousel-inner').scrollLeft() + diff);
+      arrows();
+    }
   });
 
 });

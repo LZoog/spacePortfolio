@@ -13,6 +13,7 @@ $dark-purp: #15142d;
 $medlight-purp: #3b3f6b;
 // now #3b3f6d
 $light-purp: #4f558e;
+$purp: #7772c0;
 $pink: #8e4f73;
 $light-pink: #c088a8;
 $turq: turquoise;
@@ -42,7 +43,7 @@ h1, h2 {
 
 .i { font-style: italic; }
 strong, .pink { color: $pink; }
-.purp { color: #7772c0; }
+.purp { color: $purp; }
 .turq { color: $turq; }
 .darkturq { color: $dark-turq; }
 .grey { color: $grey; }
@@ -57,6 +58,11 @@ strong, .pink { color: $pink; }
   animation: pulse 6s infinite;
   text-shadow: 0px 0px 2px $medlight-purp;
   font-size: 1.2em;
+}
+
+.more {
+  -webkit-animation: more 1.5s infinite;
+  animation: more 1.5s infinite;
 }
 
 .pixel {
@@ -223,6 +229,8 @@ header {
   &#hide-projects {
     float: right;
     font-size: 1.1em;
+    //position: relative;
+    top: 0px;
   }
 
   &:hover {
@@ -235,11 +243,13 @@ header {
 #carousel {
   display: inline-block;
   text-align: left;
-  width: 275px;
+  width: 285px;
   height: 100px;
   overflow: hidden;
 
   &-inner {
+    // 5px to make sure hover text is fully displayed
+    padding-left: 5px;
     white-space: nowrap;
     height: 120px;
     overflow-x: scroll;
@@ -248,7 +258,23 @@ header {
 
 #left, #right {
   display: inline-block;
-  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  border: 3px solid $light-purp;
+  position: relative;
+  top: -20px;
+
+  img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: -30px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 div[id^="fl-"] {
@@ -615,6 +641,17 @@ div[id^="fl-"] {
   100% {color: $dark-turq; }
 }
 
+@-webkit-keyframes more {
+  0% { border-color: $light-purp; }
+  50% { border-color: $light-pink; }
+  100% { border-color: $light-purp; }
+}
+@keyframes more {
+  0% { border-color: $light-purp; }
+  50% { border-color: $light-pink; }
+  100% { border-color: $light-purp; }
+}
+
 
 //* media queries *
 //larger than mobile
@@ -657,11 +694,16 @@ div[id^="fl-"] {
       margin-top: -18px;
       float: right;
 
-      img {
-        width: 60px;
-      }
+      //disable highlighting
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
 
-      a:not(:last-of-type) {
+      a img {
+        width: 60px;
         margin-right: 8px;
       }
     }
