@@ -30,7 +30,7 @@ html, body {
   margin: 0px; }
 
 h1, h2 {
-  font-family: Georgia, Times, Times New Roman, serif;
+  font-family: 'ABeeZee', serif;
   white-space: nowrap; }
 
 .i {
@@ -69,9 +69,9 @@ strong, .pink {
   text-shadow: 0px 0px 2px #3b3f6b;
   font-size: 1.2em; }
 
-.more {
-  -webkit-animation: more 1.5s infinite;
-  animation: more 1.5s infinite; }
+.active-arrow {
+  -webkit-animation: arrows 1.5s infinite;
+  animation: arrows 1.5s infinite; }
 
 .pixel {
   font-family: 'munroregular';
@@ -151,9 +151,7 @@ header {
     left: 255px;
     font-size: 1.3em; }
   .contacts-link:hover, .projects-link:hover {
-    cursor: pointer;
-    filter: alpha(opacity=65);
-    opacity: .65; }
+    cursor: pointer; }
 
 #projects {
   text-align: center;
@@ -175,8 +173,11 @@ header {
       color: turquoise; }
     #projects a p {
       position: absolute;
-      top: -16px;
+      top: -25px;
       left: 0;
+      right: 0;
+      width: 100%;
+      text-align: center;
       font-family: 'munroregular';
       font-size: .85em;
       text-transform: uppercase;
@@ -194,7 +195,7 @@ header {
 .projects-link#hide-projects {
   float: right;
   font-size: 1.1em;
-  top: 0px; }
+  top: 7px; }
 .projects-link:hover {
   cursor: pointer;
   filter: alpha(opacity=65);
@@ -203,23 +204,23 @@ header {
 #carousel {
   display: inline-block;
   text-align: left;
-  width: 285px;
+  width: 350px;
   height: 100px;
   overflow: hidden; }
   #carousel-inner {
-    padding-left: 5px;
     white-space: nowrap;
     height: 120px;
     overflow-x: scroll; }
 
 #left, #right {
   display: inline-block;
-  width: 30px;
-  height: 30px;
-  border-radius: 25px;
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  background: #4f558e;
   border: 3px solid #4f558e;
   position: relative;
-  top: -20px; }
+  top: -18px; }
   #left img, #right img {
     width: 100%;
     height: auto;
@@ -568,20 +569,26 @@ div[id^="fl-"] {
     color: turquoise; }
   100% {
     color: #0e8d8c; } }
-@-webkit-keyframes more {
+@-webkit-keyframes arrows {
   0% {
-    border-color: #4f558e; }
+    border-color: #4f558e;
+    background: #4f558e; }
   50% {
-    border-color: #c088a8; }
+    border-color: #c088a8;
+    background: #3b3f6b; }
   100% {
-    border-color: #4f558e; } }
-@keyframes more {
+    border-color: #4f558e;
+    background: #4f558e; } }
+@keyframes arrows {
   0% {
-    border-color: #4f558e; }
+    border-color: #4f558e;
+    background: #4f558e; }
   50% {
-    border-color: #c088a8; }
+    border-color: #c088a8;
+    background: #3b3f6b; }
   100% {
-    border-color: #4f558e; } }
+    border-color: #4f558e;
+    background: #4f558e; } }
 @media all and (min-width: 768px) {
   .hidden-xs-down {
     display: inline; }
@@ -616,8 +623,8 @@ div[id^="fl-"] {
     -ms-user-select: none;
     user-select: none; }
     header #projects a img {
-      width: 60px;
-      margin-right: 8px; }
+      width: 75px;
+      margin: 0 4px; }
 
   .featherlight-close-icon.featherlight-close {
     right: 25px;

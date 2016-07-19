@@ -37,7 +37,7 @@ html, body {
 }
 
 h1, h2 {
-  font-family: Georgia, Times, Times New Roman, serif;
+  font-family: 'ABeeZee', serif;
   white-space: nowrap;
 }
 
@@ -60,9 +60,9 @@ strong, .pink { color: $pink; }
   font-size: 1.2em;
 }
 
-.more {
-  -webkit-animation: more 1.5s infinite;
-  animation: more 1.5s infinite;
+.active-arrow {
+  -webkit-animation: arrows 1.5s infinite;
+  animation: arrows 1.5s infinite;
 }
 
 .pixel {
@@ -173,8 +173,6 @@ header {
 
   &:hover {
     cursor: pointer;
-    filter: alpha(opacity=65); //IE8
-    opacity: .65;
   }
 }
 
@@ -204,8 +202,11 @@ header {
 
     p {
       position: absolute;
-      top: -16px;
+      top: -25px;
       left: 0;
+      right: 0;
+      width: 100%;
+      text-align: center;
       font-family: 'munroregular';
       font-size: .85em;
       text-transform: uppercase;
@@ -229,8 +230,7 @@ header {
   &#hide-projects {
     float: right;
     font-size: 1.1em;
-    //position: relative;
-    top: 0px;
+    top: 7px;
   }
 
   &:hover {
@@ -243,13 +243,13 @@ header {
 #carousel {
   display: inline-block;
   text-align: left;
-  width: 285px;
+  width: 350px;
   height: 100px;
   overflow: hidden;
 
   &-inner {
     // 5px to make sure hover text is fully displayed
-    padding-left: 5px;
+    //padding-left: 5px;
     white-space: nowrap;
     height: 120px;
     overflow-x: scroll;
@@ -258,12 +258,13 @@ header {
 
 #left, #right {
   display: inline-block;
-  width: 30px;
-  height: 30px;
-  border-radius: 25px;
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  background: $light-purp;
   border: 3px solid $light-purp;
   position: relative;
-  top: -20px;
+  top: -18px;
 
   img {
     width: 100%;
@@ -641,15 +642,15 @@ div[id^="fl-"] {
   100% {color: $dark-turq; }
 }
 
-@-webkit-keyframes more {
-  0% { border-color: $light-purp; }
-  50% { border-color: $light-pink; }
-  100% { border-color: $light-purp; }
+@-webkit-keyframes arrows {
+  0% { border-color: $light-purp; background: $light-purp; }
+  50% { border-color: $light-pink; background: $medlight-purp; }
+  100% { border-color: $light-purp; background: $light-purp; }
 }
-@keyframes more {
-  0% { border-color: $light-purp; }
-  50% { border-color: $light-pink; }
-  100% { border-color: $light-purp; }
+@keyframes arrows {
+  0% { border-color: $light-purp; background: $light-purp; }
+  50% { border-color: $light-pink; background: $medlight-purp; }
+  100% { border-color: $light-purp; background: $light-purp; }
 }
 
 
@@ -668,6 +669,7 @@ div[id^="fl-"] {
   #home-text-top {
     top: -20em;
   }
+
   header {
 
     #contact {
@@ -703,8 +705,8 @@ div[id^="fl-"] {
       user-select: none;
 
       a img {
-        width: 60px;
-        margin-right: 8px;
+        width: 75px;
+        margin: 0 4px;
       }
     }
   }
