@@ -37,7 +37,7 @@ html, body {
 }
 
 h1, h2 {
-  font-family: 'Miriam Libre', serif;
+  font-family: 'ABeeZee', serif;
   white-space: nowrap;
 }
 
@@ -173,6 +173,8 @@ header {
 
   &:hover {
     cursor: pointer;
+    opacity: .65;
+    filter: alpha(opacity=65); //IE8
   }
 }
 
@@ -414,9 +416,15 @@ div[id^="fl-"] {
     text-align: center;
     color: $light-purp;
     font-size: 2em;
-    border-bottom: 1px solid $light-purp;
-    padding-bottom: 12px;
-    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  hr {
+    // width set in JS
+    width: 0px;
+    max-width: 100%;
+    border: 1px solid $grey;
+    margin: -3px auto 23px;
   }
 
   p {
@@ -504,8 +512,8 @@ div[id^="fl-"] {
   h1 {
     color: $off-white;
     text-shadow: 1px 1px 3px $dark-purp;
-    font-size: 7.2vm;
-    font-size: 7.2vmin;
+    font-size: 6.9vm;
+    font-size: 6.9vmin;
   }
   a {
     text-shadow: 1px 1px 3px $dark-purp;
@@ -670,44 +678,42 @@ div[id^="fl-"] {
     top: -20em;
   }
 
-  header {
 
-    #contact {
-      position: static;
+  #contact {
+    position: static;
+    float: left;
+    margin-top: -12px;
+
+    img {
+      width: 60px;
+    }
+  }
+  .contacts-link {
+    font-size: 1.5em;
+
+    &#hide-contacts {
+      position: relative;
+      top: 15px;
+      left: 0;
       float: left;
-      margin-top: -12px;
-
-      img {
-        width: 60px;
-      }
+      font-size: 1.1em;
     }
-    .contacts-link {
-      font-size: 1.5em;
+  }
+  #projects {
+    margin-top: -18px;
+    float: right;
 
-      &#hide-contacts {
-        position: relative;
-        top: 15px;
-        left: 0;
-        float: left;
-        font-size: 1.1em;
-      }
-    }
-    #projects {
-      margin-top: -18px;
-      float: right;
+    //disable highlighting
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
-      //disable highlighting
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-
-      a img {
-        width: 75px;
-        margin: 0 4px;
-      }
+    a img {
+      width: 75px;
+      margin: 0 4px;
     }
   }
 

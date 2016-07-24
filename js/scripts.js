@@ -1,5 +1,7 @@
 $(function(){
 
+  var projWidth;
+
   // * VIEW/HIDE & ANIMATE CONTACT/PROJECTS *
   $('#hide-contacts').click(function(){
     conProjView('contact','cSlideLeft', 'cSlideRight');
@@ -12,6 +14,8 @@ $(function(){
   });
   $('#show-projects').click(function(){
     conProjView('project','pSlideRight', 'pSlideLeft');
+    // get projWidth after animation is completed (1500ms), 5 for #carousel spacing
+    setTimeout(function(){projWidth = $('#carousel-inner a').outerWidth(true) + 5;},1510);
   });
   $('.navbar-default .navbar-toggle').click(function(){
     $('#blackout').toggleClass('visibility');
@@ -34,15 +38,17 @@ $(function(){
     $(id).css({'-webkit-animation': animation + ' .75s', 'animation': animation + '  .75s'});
   };
 
-  //id, name, text displayed normally, text displayed on hover
-  projectHover('#p1', 'stylebags', $('#p1').text(), '&nbsp;[full/node.js]');
-  projectHover('#p2', 'hoh', $('#p2').text(), '&nbsp;[full/rails]');
-  projectHover('#p3', 'wtxlawn', $('#p3').text(), '&nbsp; [front-end]');
-  projectHover('#p4', 'magic', $('#p4').text(), '&nbsp; [front-end]');
-  projectHover('#p5', 'tictactoe', $('#p5').text(), '&nbsp; &nbsp; &nbsp; [JS]');
-  projectHover('#p6', 'astro', $('#p6').text(), '&nbsp; [portfolio]');
+  //project name, text displayed on hover
+  projectHover('stylebags', '[full/node.js]');
+  projectHover('hoh', '[full/rails]');
+  projectHover('wtxlawn', '[front-end]');
+  projectHover('magic',  '[front-end]');
+  projectHover('tictactoe', '[JS]');
+  projectHover('astro', '[portfolio]');
 
-  function projectHover(id, name, activeText, hoverText) {
+  function projectHover(name, hoverText) {
+    var id = '#'+name;
+    var activeText = $('#'+name+'').text();
     var activeImage = 'img/icon-projects.png';
     var hoverImage = 'img/icon-projects-'+name+'.png';
     $(id).hover(function() {
@@ -55,37 +61,42 @@ $(function(){
   };
 
   // * CAROUSEL *
-  // for arrows animation; - 4 because of first 4 shown, 73.5 is the scrollLeft of one project; - 37px for middle of project
-  var maxScroll = (($('#carousel-inner a').length - 4) * 73.5) - 37;
+  $($('#carousel-inner')).scroll(function(){
+    arrows();
+  });
 
   // arrows animation
   function arrows(){
+    // current carousel scroll position
     var carouselScroll = $('#carousel-inner').scrollLeft();
+    // furthest scroll position; -4 for first 4 projects, - 1/2 projWidth for middle of last project
+    var maxScroll = (($('#carousel-inner a').length - 4) * projWidth) - projWidth/2;
+
     if (carouselScroll <= 0) {
-      $('#left').removeClass('more');
+      $('#left').removeClass('active-arrow');
     // there are more projects to the left
-    } else if (carouselScroll >= 37) {
-      $('#left').addClass('more');
+    } else if (carouselScroll >= projWidth/2) {
+      $('#left').addClass('active-arrow');
     }
     // if user is scrolled to the right max
     if (carouselScroll >= maxScroll) {
-      $('#right').removeClass('more');
+      $('#right').removeClass('active-arrow');
     } else {
       // there are more projects to the right
-      $('#right').addClass('more');
+      $('#right').addClass('active-arrow');
     }
   };
 
   // right & left buttons
   $('#left').click(function(){
     $('#carousel-inner').animate({
-      scrollLeft: "-=74px"
+      scrollLeft: "-="+projWidth+"px"
     }, 200);
     setTimeout(arrows, 210);
   });
   $('#right').click(function(){
     $('#carousel-inner').animate({
-      scrollLeft: "+=74px"
+      scrollLeft: "+="+projWidth+"px"
     }, 200);
     setTimeout(arrows, 210);
   });
@@ -119,5 +130,24 @@ $(function(){
       arrows();
     }
   });
+
+  $('#carousel-inner a, #home-text-bottom a').click(function(){
+    setTimeout(function(){
+      $('.feather h1').each(function(){
+        console.log($(this).width());
+        if ($(this).width() !== 0) {
+          for (i = 0; i <= $(this).width()+20; i++) {
+            load($(this), i);
+          }
+        }
+      });
+    },300);
+
+  });
+  function load(h1, i) {
+    setTimeout(function() {
+      h1.parent().next().css('width', i+'px');
+    }, i * 1);
+  }
 
 });

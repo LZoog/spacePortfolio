@@ -30,7 +30,7 @@ html, body {
   margin: 0px; }
 
 h1, h2 {
-  font-family: 'Miriam Libre', serif;
+  font-family: 'ABeeZee', serif;
   white-space: nowrap; }
 
 .i {
@@ -151,7 +151,9 @@ header {
     left: 255px;
     font-size: 1.3em; }
   .contacts-link:hover, .projects-link:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    opacity: .65;
+    filter: alpha(opacity=65); }
 
 #projects {
   text-align: center;
@@ -331,9 +333,12 @@ div[id^="fl-"] {
     text-align: center;
     color: #4f558e;
     font-size: 2em;
-    border-bottom: 1px solid #4f558e;
-    padding-bottom: 12px;
-    margin-bottom: 20px; }
+    display: inline-block; }
+  .feather hr {
+    width: 0px;
+    max-width: 100%;
+    border: 1px solid grey;
+    margin: -3px auto 23px; }
   .feather p {
     font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier;
     font-size: 1.1em;
@@ -399,8 +404,8 @@ div[id^="fl-"] {
   #home-text-bottom h1 {
     color: #f4edf5;
     text-shadow: 1px 1px 3px #15142d;
-    font-size: 7.2vm;
-    font-size: 7.2vmin; }
+    font-size: 6.9vm;
+    font-size: 6.9vmin; }
   #home-text-bottom a {
     text-shadow: 1px 1px 3px #15142d;
     color: #f4edf5;
@@ -599,21 +604,23 @@ div[id^="fl-"] {
   #home-text-top {
     top: -20em; }
 
-  header #contact {
+  #contact {
     position: static;
     float: left;
     margin-top: -12px; }
-    header #contact img {
+    #contact img {
       width: 60px; }
-  header .contacts-link, header .projects-link {
+
+  .contacts-link, .projects-link {
     font-size: 1.5em; }
-    header .contacts-link#hide-contacts, header #hide-contacts.projects-link {
+    .contacts-link#hide-contacts, #hide-contacts.projects-link {
       position: relative;
       top: 15px;
       left: 0;
       float: left;
       font-size: 1.1em; }
-  header #projects {
+
+  #projects {
     margin-top: -18px;
     float: right;
     -webkit-touch-callout: none;
@@ -622,7 +629,7 @@ div[id^="fl-"] {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
-    header #projects a img {
+    #projects a img {
       width: 75px;
       margin: 0 4px; }
 
