@@ -48,6 +48,16 @@ strong, .pink { color: $pink; }
 .darkturq { color: $dark-turq; }
 .grey { color: $grey; }
 
+.feather p.construction {
+  text-transform: uppercase;
+  color: $dark-turq;
+  text-align: center;
+  font-size: 1.5em;
+  position: relative;
+  top: -6px;
+  left: -40px;
+}
+
 .hidden-xs-down, .none { display: none; }
 .hidden-sm-up { display: inline; }
 .hide { visibility: hidden; }
@@ -69,10 +79,6 @@ strong, .pink { color: $pink; }
   font-family: 'munroregular';
   letter-spacing: 1px;
   padding-left: 2px;
-}
-
-#preload {
-
 }
 
 //* elements *
@@ -279,6 +285,8 @@ header {
     }
   }
 }
+// Safari
+_::-webkit-full-page-media, _:future, :root #left, #right { top:25px; }
 
 div[id^="fl-"] {
   display: none;
@@ -415,6 +423,7 @@ div[id^="fl-"] {
     }
 
     &.astro {
+      width: 80px;
       float: left;
       margin: 0 9px 9px 0;
     }
@@ -617,7 +626,7 @@ code {
 }
 
 #preload {
-  background-image: url(../img/icon-projects-stylebags.png), url(../img/icon-projects-hoh.png), url(../img/icon-projects-wtxlawn.png), url(../img/icon-projects-magic.png), url(../img/icon-projects-tictactoe.png), url(../img/icon-projects-astro.png);
+  background-image: url(../img/icon-projects-dragonduel.png), url(../img/icon-projects-stylebags.png), url(../img/icon-projects-hoh.png), url(../img/icon-projects-wtxlawn.png), url(../img/icon-projects-magic.png), url(../img/icon-projects-tictactoe.png), url(../img/icon-projects-astro.png);
 }
 
 

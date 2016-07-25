@@ -39,6 +39,7 @@ $(function(){
   };
 
   //project name, text displayed on hover
+  projectHover('dragonduel', '[full/node.js]')
   projectHover('stylebags', '[full/node.js]');
   projectHover('hoh', '[full/rails]');
   projectHover('wtxlawn', '[front-end]');

@@ -51,6 +51,15 @@ strong, .pink {
 .grey {
   color: grey; }
 
+.feather p.construction {
+  text-transform: uppercase;
+  color: #0e8d8c;
+  text-align: center;
+  font-size: 1.5em;
+  position: relative;
+  top: -6px;
+  left: -40px; }
+
 .hidden-xs-down, .none {
   display: none; }
 
@@ -231,6 +240,9 @@ header {
     #left img:hover, #right img:hover {
       cursor: pointer; }
 
+_::-webkit-full-page-media, _:future, :root #left, #right {
+  top: 25px; }
+
 div[id^="fl-"] {
   display: none;
   background-color: #f4edf5;
@@ -323,6 +335,7 @@ div[id^="fl-"] {
     .feather .gh.bpost {
       margin-left: -6px; }
     .feather .gh.astro {
+      width: 80px;
       float: left;
       margin: 0 9px 9px 0; }
   .feather .site-logo {
@@ -474,7 +487,7 @@ code {
   left: 0; }
 
 #preload {
-  background-image: url(../img/icon-projects-stylebags.png), url(../img/icon-projects-hoh.png), url(../img/icon-projects-wtxlawn.png), url(../img/icon-projects-magic.png), url(../img/icon-projects-tictactoe.png), url(../img/icon-projects-astro.png); }
+  background-image: url(../img/icon-projects-dragonduel.png), url(../img/icon-projects-stylebags.png), url(../img/icon-projects-hoh.png), url(../img/icon-projects-wtxlawn.png), url(../img/icon-projects-magic.png), url(../img/icon-projects-tictactoe.png), url(../img/icon-projects-astro.png); }
 
 @-webkit-keyframes twinkle {
   from {
