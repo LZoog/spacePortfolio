@@ -234,7 +234,19 @@ header {
 div[id^="fl-"] {
   display: none;
   background-color: #f4edf5;
-  padding: 0 10px 10px 10px; }
+  border-radius: 10px;
+  border: 3px dotted #c088a8;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw; }
+  div[id^="fl-"]:not(.sm-width) {
+    max-width: 1000px;
+    max-height: 700px; }
+  div[id^="fl-"].sm-width {
+    max-width: 800px;
+    max-height: 600px; }
 
 .featherlight-close-icon.featherlight-close {
   font-size: 2.3em;
@@ -255,20 +267,45 @@ div[id^="fl-"] {
 .featherlight .featherlight-content {
   background: url(../img/stars.png); }
 
-.featherlight-inner {
-  border-radius: 10px;
-  border: 3px dotted #c088a8; }
-
 .feather {
-  max-width: 800px;
+  width: 100%;
+  height: 100%;
+  position: relative;
   box-sizing: border-box;
-  padding: 10px 25px 15px; }
+  padding: 0; }
+  .feather .wrapper {
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 5px; }
+  .feather .row {
+    margin-left: 0;
+    margin-right: 0; }
   .feather ::selection {
     background: turquoise;
     /* WebKit/Blink Browsers */ }
   .feather ::-moz-selection {
     background: turquoise;
     /* Gecko Browsers */ }
+  .feather .screenshots-title p {
+    color: #0e8d8c; }
+  .feather .screenshots img {
+    width: 100%;
+    height: auto;
+    border: 2px dotted #f4edf5;
+    margin: 4px 0;
+    padding: 4px;
+    border-radius: 3px; }
+    .feather .screenshots img.current {
+      border: 2px dotted #c088a8; }
+    .feather .screenshots img:not(.current):hover {
+      border: 2px dotted #c088a8;
+      cursor: pointer; }
+  .feather div[class^="info"]:not(.info-default) {
+    display: none; }
   .feather a img:not(.resume), .feather .resume-block {
     border: 2px dotted #f4edf5; }
   .feather a:hover img:not(.resume), .feather a:hover.resume-block {
@@ -346,6 +383,9 @@ div[id^="fl-"] {
 
 .featherlight:last-of-type {
   background: rgba(0, 0, 0, 0.65); }
+
+code {
+  max-height: 300px; }
 
 #spacey {
   height: 100%;

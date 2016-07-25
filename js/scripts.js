@@ -14,8 +14,8 @@ $(function(){
   });
   $('#show-projects').click(function(){
     conProjView('project','pSlideRight', 'pSlideLeft');
-    // get projWidth after animation is completed (1500ms), 5 for #carousel spacing
-    setTimeout(function(){projWidth = $('#carousel-inner a').outerWidth(true) + 5;},1510);
+    // get projWidth after animation is completed (1500ms), 4 for #carousel spacing
+    setTimeout(function(){projWidth = $('#carousel-inner a').outerWidth(true) + 4;},1510);
   });
   $('.navbar-default .navbar-toggle').click(function(){
     $('#blackout').toggleClass('visibility');
@@ -131,10 +131,12 @@ $(function(){
     }
   });
 
+  // <hr /> animation
   $('#carousel-inner a, #home-text-bottom a').click(function(){
+    // this needs to be refactored to utilize divId to avoid using h1 .each
+    //var divId = $(this).data("featherlight");
     setTimeout(function(){
-      $('.feather h1').each(function(){
-        console.log($(this).width());
+      $('.container.feather h1').each(function(){
         if ($(this).width() !== 0) {
           for (i = 0; i <= $(this).width()+20; i++) {
             load($(this), i);
@@ -146,8 +148,23 @@ $(function(){
   });
   function load(h1, i) {
     setTimeout(function() {
-      h1.parent().next().css('width', i+'px');
-    }, i * 1);
+      // h1.div.hr
+      h1.parent().next().width(i+'px');
+    }, i * .8);
   }
+
+  // * PROJECT SCREENSHOT/FEATURE VIEW *
+  $('.screenshots img').click(function(){
+    var screenNum = $(this).attr('class');
+    var screenSrc = $(this).attr('src');
+
+    $(this).parents('.feather').find('.screenshots img').removeClass('current');
+    $(this).addClass('current');
+
+    $('div[class^="info"]').css('display', 'none');
+    $('div.info-'+screenNum).css('display','block');
+
+    $(this).parents().siblings('.main-screenshot').find('.default').attr('src', screenSrc);
+  });
 
 });

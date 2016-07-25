@@ -283,7 +283,24 @@ header {
 div[id^="fl-"] {
   display: none;
   background-color: $off-white;
-  padding: 0 10px 10px 10px;
+  //padding: 0 10px 10px 10px;
+  border-radius: 10px;
+  border: 3px dotted $light-pink;
+
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+
+  &:not(.sm-width) {
+    max-width: 1000px;
+    max-height: 700px;
+  }
+  &.sm-width {
+    max-width: 800px;
+    max-height: 600px;
+  }
 }
 
 .featherlight-close-icon.featherlight-close {
@@ -312,20 +329,64 @@ div[id^="fl-"] {
   }
 }
 
-.featherlight-inner {
-  border-radius: 10px;
-  border: 3px dotted $light-pink;
-}
-
 .feather {
-  max-width: 800px;
+  width: 100%;
+  height: 100%;
+  position: relative;
   box-sizing: border-box;
-  padding: 10px 25px 15px;
+  padding: 0;
+  //padding: 10px 25px 15px;
+
+  .wrapper {
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 5px;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   ::selection {
     background: $turq; /* WebKit/Blink Browsers */
   }
   ::-moz-selection {
     background: $turq; /* Gecko Browsers */
+  }
+
+  .screenshots {
+    &-title p {
+      color: $dark-turq;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border: 2px dotted $off-white;
+      margin: 4px 0;
+      padding: 4px;
+      border-radius: 3px;
+
+      &.current {
+        border: 2px dotted $light-pink;
+      }
+
+      &:not(.current) {
+        &:hover {
+          border: 2px dotted $light-pink;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  div[class^="info"]:not(.info-default) {
+    display: none;
   }
 
   a img:not(.resume), .resume-block {
@@ -436,6 +497,10 @@ div[id^="fl-"] {
 
 .featherlight:last-of-type {
     background: rgba(0,0,0,.65);
+}
+
+code {
+  max-height: 300px;
 }
 
 #spacey {
