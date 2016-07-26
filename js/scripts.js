@@ -39,7 +39,7 @@ $(function(){
   };
 
   //project name, text displayed on hover
-  projectHover('dragonduel', '[full/node.js]')
+  projectHover('dragonduel', '[full/node.js]');
   projectHover('stylebags', '[full/node.js]');
   projectHover('hoh', '[full/rails]');
   projectHover('wtxlawn', '[front-end]');
@@ -132,10 +132,25 @@ $(function(){
     }
   });
 
-  // <hr /> animation
   $('#carousel-inner a, #home-text-bottom a').click(function(){
-    // this needs to be refactored to utilize divId to avoid using h1 .each
-    //var divId = $(this).data("featherlight");
+    var divId = $(this).data("featherlight");
+
+    // needs to be refactored to utilize divId to avoid using img.each
+    $('img[class^="screen"]').each(function(){
+      $(this).css('opacity', '0').addClass('fade-in');
+
+    });
+
+    // TEMPORARY HEIGHT FIX
+    var trueHeight = $(divId+' .content')[1].scrollHeight + 22;
+    if ($(divId).hasClass('sm-width')) {
+      $(divId+'.sm-width').css('max-height', trueHeight+'px');
+    } else {
+      $(divId).css('max-height', trueHeight+'px');
+    }
+
+    // <hr /> animation
+    // needs to be refactored to utilize divId to avoid using h1.each
     setTimeout(function(){
       $('.container.feather h1').each(function(){
         if ($(this).width() !== 0) {
@@ -149,15 +164,17 @@ $(function(){
   });
   function load(h1, i) {
     setTimeout(function() {
-      // h1.div.hr
+      // h1.div.hr - can be better
       h1.parent().next().width(i+'px');
     }, i * .8);
   }
 
   // * PROJECT SCREENSHOT/FEATURE VIEW *
   $('.screenshots img').click(function(){
-    var screenNum = $(this).attr('class');
+    // img will have fade-in class; only grab screen#
+    var screenNum = $(this).attr('class').split(' ')[0];
     var screenSrc = $(this).attr('src');
+
 
     $(this).parents('.feather').find('.screenshots img').removeClass('current');
     $(this).addClass('current');
@@ -165,7 +182,7 @@ $(function(){
     $('div[class^="info"]').css('display', 'none');
     $('div.info-'+screenNum).css('display','block');
 
-    $(this).parents().siblings('.main-screenshot').find('.default').attr('src', screenSrc);
+    $(this).parents().siblings('.main-screenshot').find('.screen0').attr('src', screenSrc);
   });
 
 });
