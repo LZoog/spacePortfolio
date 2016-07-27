@@ -135,19 +135,20 @@ $(function(){
   $('#carousel-inner a, #home-text-bottom a').click(function(){
     var divId = $(this).data("featherlight");
 
+    // make sure info-screen0 is displayed
+    $('div[class^="info"]').css('display', 'none');
+    $('div.info-screen0').css('display','block');
+
     // needs to be refactored to utilize divId to avoid using img.each
     $('img[class^="screen"]').each(function(){
       $(this).css('opacity', '0').addClass('fade-in');
-
     });
 
-    // TEMPORARY HEIGHT FIX
-    // var trueHeight = $(divId+' .content')[1].scrollHeight + 25;
-    // if ($(divId).hasClass('sm-width')) {
-    //   $(divId+'.sm-width').css('max-height', trueHeight+'px');
-    // } else {
-    //   $(divId).css('max-height', trueHeight+'px');
-    // }
+    // apply the real div height if smaller than given height
+    var trueHeight = $(divId+' .content')[1].scrollHeight + 25;
+    if ($(divId).hasClass('sm-width') && (trueHeight < $(divId+'.sm-width').height())) {
+      $(divId+'.sm-width').css('max-height', trueHeight+'px');
+    }
 
     // <hr /> animation
     // needs to be refactored to utilize divId to avoid using h1.each
@@ -174,7 +175,6 @@ $(function(){
     // img will have fade-in class; only grab screen#
     var screenNum = $(this).attr('class').split(' ')[0];
     var screenSrc = $(this).attr('src');
-
 
     $(this).parents('.feather').find('.screenshots img').removeClass('current');
     $(this).addClass('current');
