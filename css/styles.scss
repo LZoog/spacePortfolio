@@ -291,23 +291,24 @@ _::-webkit-full-page-media, _:future, :root #left, #right { top:25px; }
 div[id^="fl-"] {
   display: none;
   background-color: $off-white;
-  //padding: 0 10px 10px 10px;
   border-radius: 10px;
   border: 3px dotted $light-pink;
 
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
-  height: 100vh;
-  width: 100vw;
+
+  // 100 px for spacey lightbox border (padding)
+  max-width: calc(100vw - 100px);
+  max-height: calc(100vh - 100px);
 
   &:not(.sm-width) {
-    max-width: 1000px;
-    max-height: 700px;
+    width: 1000px;
+    height: 700px;
   }
   &.sm-width {
-    max-width: 800px;
-    max-height: 600px;
+    width: 800px;
+    height: 600px;
   }
 }
 
@@ -367,7 +368,16 @@ div[id^="fl-"] {
     background: $turq; /* Gecko Browsers */
   }
 
+  .main-screenshot {
+    // override Bootstrap styles
+    padding-left: 5px!important;
+    padding-right: 5px!important;
+  }
+
   .screenshots {
+    padding-left: 5px!important;
+    padding-right: 5px!important;
+
     &-title p {
       color: $dark-turq;
       text-shadow: 0px 0px 1px $turq;
@@ -378,16 +388,20 @@ div[id^="fl-"] {
       height: auto;
       border: 2px dotted $off-white;
       margin: 4px 0;
-      padding: 4px;
       border-radius: 3px;
 
       &.current {
         border: 2px dotted $light-pink;
+        padding: 4px;
       }
 
       &:not(.current) {
+        border: 1px dotted $grey;
+        padding: 5px;
+
         &:hover {
           border: 2px dotted $light-pink;
+          padding: 4px;
           cursor: pointer;
         }
       }

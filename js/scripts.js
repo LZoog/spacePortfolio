@@ -142,12 +142,12 @@ $(function(){
     });
 
     // TEMPORARY HEIGHT FIX
-    var trueHeight = $(divId+' .content')[1].scrollHeight + 22;
-    if ($(divId).hasClass('sm-width')) {
-      $(divId+'.sm-width').css('max-height', trueHeight+'px');
-    } else {
-      $(divId).css('max-height', trueHeight+'px');
-    }
+    // var trueHeight = $(divId+' .content')[1].scrollHeight + 25;
+    // if ($(divId).hasClass('sm-width')) {
+    //   $(divId+'.sm-width').css('max-height', trueHeight+'px');
+    // } else {
+    //   $(divId).css('max-height', trueHeight+'px');
+    // }
 
     // <hr /> animation
     // needs to be refactored to utilize divId to avoid using h1.each

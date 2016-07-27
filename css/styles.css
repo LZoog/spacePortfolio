@@ -251,14 +251,14 @@ div[id^="fl-"] {
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
-  height: 100vh;
-  width: 100vw; }
+  max-width: calc(100vw - 100px);
+  max-height: calc(100vh - 100px); }
   div[id^="fl-"]:not(.sm-width) {
-    max-width: 1000px;
-    max-height: 700px; }
+    width: 1000px;
+    height: 700px; }
   div[id^="fl-"].sm-width {
-    max-width: 800px;
-    max-height: 600px; }
+    width: 800px;
+    height: 600px; }
 
 .featherlight-close-icon.featherlight-close {
   font-size: 2.3em;
@@ -302,21 +302,31 @@ div[id^="fl-"] {
   .feather ::-moz-selection {
     background: turquoise;
     /* Gecko Browsers */ }
-  .feather .screenshots-title p {
-    color: #0e8d8c;
-    text-shadow: 0px 0px 1px turquoise; }
-  .feather .screenshots img {
-    width: 100%;
-    height: auto;
-    border: 2px dotted #f4edf5;
-    margin: 4px 0;
-    padding: 4px;
-    border-radius: 3px; }
-    .feather .screenshots img.current {
-      border: 2px dotted #c088a8; }
-    .feather .screenshots img:not(.current):hover {
-      border: 2px dotted #c088a8;
-      cursor: pointer; }
+  .feather .main-screenshot {
+    padding-left: 5px !important;
+    padding-right: 5px !important; }
+  .feather .screenshots {
+    padding-left: 5px !important;
+    padding-right: 5px !important; }
+    .feather .screenshots-title p {
+      color: #0e8d8c;
+      text-shadow: 0px 0px 1px turquoise; }
+    .feather .screenshots img {
+      width: 100%;
+      height: auto;
+      border: 2px dotted #f4edf5;
+      margin: 4px 0;
+      border-radius: 3px; }
+      .feather .screenshots img.current {
+        border: 2px dotted #c088a8;
+        padding: 4px; }
+      .feather .screenshots img:not(.current) {
+        border: 1px dotted grey;
+        padding: 5px; }
+        .feather .screenshots img:not(.current):hover {
+          border: 2px dotted #c088a8;
+          padding: 4px;
+          cursor: pointer; }
   .feather div[class^="info"]:not(.info-screen0) {
     display: none; }
   .feather a img:not(.resume), .feather .resume-block {
