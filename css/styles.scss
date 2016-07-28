@@ -427,9 +427,9 @@ div[id^="fl-"] {
 
   .full-width {
     padding: 3px;
-    margin: 0 auto;
     margin-bottom: 15px;
     width: 100%;
+
     &:not(.screen0) {
       width: 75%;
     }
@@ -853,8 +853,17 @@ div[id^="fl-"] {
     .full-width:not(.screen0) {
       width: 100%;
     }
-    .screenshots img {
+    .screenshots.col-sm-2 img {
       width: 100%;
+    }
+    .screenshots.col-sm-4 img {
+      width: 50%;
+      display: block;
+      position: relative;
+      left: 25%;
+    }
+    .one-screens-col {
+      margin-left: 10%;
     }
   }
 

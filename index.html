@@ -205,34 +205,37 @@
 						<div class="col-xs-12 col-sm-8 text-center main-screenshot">
 							<p><a href="https://github.com/LZoog/StyleBags" target="_blank"><img src="img/icon-gh.png" class="gh"></a>
 							<a href="https://stylebags.herokuapp.com/" target="_blank">(Heroku takes 10-15 seconds to load)<br>
-							<img src="img/stylebags/screen0.jpg" alt="Screenshot of Stylebags" class="img-responsive full-width screen0" /></a></p>
+							<img src="img/stylebags/screen0.jpg" alt="Screenshot of Stylebags" class="img-responsive full-width one-screens-col screen0" /></a></p>
 						</div>
 						<div class="col-xs-12 col-sm-4 screenshots-title text-center">
 							<p>Click to view project feature details!</p>
 						</div>
-						<div class="col-xs-12 col-sm-2 screenshots">
+						<div class="col-xs-12 col-sm-4 screenshots">
 							<img src="img/stylebags/screen0.jpg" alt="Screenshot of Stylebags" class="screen0 current" />
 							<img src="img/stylebags/screen1.jpg" alt="screenshot" class="screen1" />
 							<img src="img/stylebags/screen2.jpg" alt="screenshot" class="screen2" />
 							<img src="img/stylebags/screen3.jpg" alt="screenshot" class="screen3" />
 						</div>
-						<div class="col-xs-12 col-sm-2 screenshots">
-							<img src="img/stylebags/screen4.jpg" alt="screenshot" class="screen4" />
-							<img src="img/stylebags/screen5.jpg" alt="screenshot" class="screen5" />
-							<img src="img/stylebags/screen6.jpg" alt="screenshot" class="screen6" />
-						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-12">
 							<div class="info-screen0">
+								<p>StyleBags is a project developed in General Assembly’s boot camp with 3 total contributors, developed in 4 days. I did about 50% of the back-end work and about 80% of the front-end work. More details are on the front page.</p>
 								<p><span class="detail">Created with</span>: Node.JS/Express.JS/EJS, MongoDB/Mongoose ODM, Passport authentication middleware, Facebook OAuth, CRUD routing, AJAX, JSON from API endpoints, JavaScript/jQuery, Twitter-Bootstrap, SASS/CSS</p>
 								<p><span class="detail">Additional libraries</span>: animate.CSS</p>
 								<p><span class="detail">Future featured code snippet</span>: Push Google Fonts to array formatted & appended to stylesheet to display correct font-family</p>
 							</div>
 							<div class="info-screen1">
-								feature details
+								<p>Users can try out the color and font generators without creating an account by pressing the right arrow and c (color) or the right arrow and f (font). Users may select 3 to 6 colors to view and the fonts displayed are random fonts from Google’s API.</p>
 							</div>
 							<div class="info-screen2">
+								<p>When users save color pallets, they are referred to as “ColorBags.” Users may view random ColorBags in the database by clicking “GALLERY” from the front page and may view more by clicking “RANDOMIZE.”</p>
+								<p>If users try to view their StyleBag (ColorBags + Fonts) without being logged in, they see a message asking them to login or sign up.</p>
+							</div>
+							<div class="info-screen3">
+								<p>When logged in, users can see a “SAVE” button above the color generator and below each font. Upon clicking this, the ColorBag or font is saved into their StyleBag, which displays 5 of each by default. Users may edit, delete, or view all from the StyleBag menu bar.</p>
+							</div>
+							<div class="info-screen4">
 								feature details
 							</div>
 						</div>
@@ -275,21 +278,30 @@
 					<div class="row">
 						<div class="col-xs-12">
 							<div class="info-screen0">
+								<p>This project was created in General Assembly’s boot camp with 4 total contributors, developed in 4 1/2 days. I did about 65% of the back-end work and 95% of the front-end work (seriously). I became the development/project leader and broke up tasks and assigned them via Trello.<br>
+								The House of Hues is an interior design inspiration web application (hey, that almost rhymes) that allows users to search for room “looks” by selecting a color and room and allows users to submit images into the database.</p>
 								<p><span class="detail">Created with</span>: Ruby / on Rails, postgreSQL/Active Record ORM, Devise user authentication, CRUD routing, HTML, Twitter-Bootstrap, SASS/CSS</p>
-								<p><span class="detail">Additional libraries</span>: animate.CSS</p>
-								<p><span class="detail">Future featured code snippet</span>: how the search is performed from main page > rooms > colors to display looks</p>
-
-								<p>In code boot camp, the class was divided up into small groups to create a Ruby on Rails project required to work with user authentication and to allow users to submit something to a database. I essentially became "project leader" during this assignment by breaking up our to-do list onto small steps and assigning them via Trello, and I also did all of the front-end work and more than half of the back-end work.</p>
-								<p>In 5 days, my team and I created House of Hues: an interior design inspiration web application (hey, that almost rhymes).</p>
-								<p>Note: This project certainly isn't complete by any means. There are a few features we didn't get to. :-)<br>
-										Note2: Feel free to make an account with your real or fake e-mail, they aren't used for anything.</p>
-								<p>Biggest challenge: overcoming communication blocks with the team. Things ran much more smoothly with Trello.</p>
+								<p><span class="detail">Future featured code snippet</span>: How the search is performed from main page > rooms > colors to display looks</p>
 							</div>
 							<div class="info-screen1">
-								feature details
+								<p>On the front page, users can choose to view all looks or search by color (four are currently available).</p>
+								<p>Users can boost a look they like by clicking the +1 in the lower left-hand corner of a look, and the top 3 are displayed under “Trending Looks”.<br>
+								The front page also shows the 3 newest looks submitted to the database.</p>
 							</div>
 							<div class="info-screen2">
-								feature details
+								<p>Users can view every look in the database by clicking "View All Looks" on the homepage.</p>
+							</div>
+							<div class="info-screen3">
+								<p>When users select a color, they are taken to the next step of the search process: selecting a room. The House of Hues logo background changes to the color selected.<br>
+								A value corresponding to the color selected and then the room selected are persisted in the URL.</p>
+							</div>
+							<div class="info-screen4">
+								<p>Users are then brought to a page with the looks corresponding to the search. Users may add a new look by clicking on “+ New Look” where they are prompted for the look’s title and the URL the image can be found at.</p>
+								<p>If a user tries to add a look without the corresponding color ID and room ID in the URL, they are redirected to start their search over.</p>
+							</div>
+							<div class="info-screen5">
+								<p>User profiles display all of the looks that user has submitted to the database.<br>
+								Looks can be deleted by clicking on the “x” located in the upper right-hand corner of the look (hovered over the first look in the screenshot).</p>
 							</div>
 						</div>
 					</div>
@@ -315,11 +327,9 @@
 							<img src="img/wtxlawn.jpg" alt="Screenshot of West Texas Lawn" class="img-responsive full-width" /></a></p>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-sm-pull-6">
-							<p>This project was free-lanced for a hydromulching business. I did everything from UX, visual design, to code.<br>This was the first time I inserted media queries at the end of each individual element instead of at bottom of the SASS file and I have to say, I definitely prefer all queries at the bottom!</p>
-							<p><span>Created with</span>: HTML, mobile-first CSS/SASS, JavaScript/jQuery, Photoshop<br>
-							<span>Open source plugins/libraries</span>: none<br>
-							<span>Noteworthy</span>: I created the grassy “HYDROMULCHING” graphic in Photoshop.<br>
-							<span>Code snippet</span>:
+							<p>This project was free-lanced for a hydromulching business. I did everything from UX, to visual design, to code.<br>This was the first time I inserted media queries at the end of each individual element instead of at bottom of the SASS file and I have to say, I definitely prefer all queries at the bottom!</p>
+							<p><span class="detail">Created with</span>: HTML, mobile-first CSS/SASS, JavaScript/jQuery, graphic manipulation (I created the grassy "HYDROMULCHING" graphic)</span>
+							<p><span class="detail">Future featured code snippet</span>: custom sticky navbar/active section</p>
 						</div>
 					</div>
 				</div>
@@ -343,13 +353,12 @@
 							<a href="http://www.lzoog.com/2016/03/increasing-web-performance-time/" target="_blank"><img src="img/icon-blog.png" class="gh bpost"></a>
 							<a href="http://www.magicjays.com" target="_blank">www.magicjays.com<br>
 							<img src="img/magicjays.jpg" alt="Screenshot of MagicJays" class="img-responsive full-width" /></a></p>
-							<p>(business did increase after launching! 😁)</p>
 						</div>
 						<div class="col-xs-12 col-sm-6 col-sm-pull-6">
-							<p>This website was a free-lance project and created for my father's side business: MAGIC!</p>
-							<p>Designed based on the information I was given to display, I developed a single-page site with consistent design and chose to not bootstrap for my own media query practice.</p>
-							<p>I experimented with various plugins and libraries for this project. I ended utilizing the Featherlight jQuery plugin (that I also used in my portfolio), Owl Carousel plugin, and Animate.CSS/WOW.JS. The e-mail form was my first dabble in PHP.</p>
-							<p>Biggest challenge: getting the "About Me" image to be fully responsive.</p>
+							<p>This project was free-lanced for my father’s side business: MAGIC! I did everything from UX, to visual design, to code. I used this project as an experiment with a good combination of free plugins & libraries, and the contact form was written in PHP.</p>
+							<p><span class="detail">Created with</span>: HTML, mobile-first SASS/CSS, light jQuu Photoshop/graphic manipulation, light jQuery
+							<p><span class="detail">Plugins/libraries</span>: Featherlight (light boxes), Owl Carousel, animate.CSS, WOW.JS
+							<p><span class="detail">Code snippet</span>: "About Me" background image displaying correctly on mobile
 						</div>
 					</div>
 				</div>
@@ -371,37 +380,33 @@
 						<div class="col-xs-12 col-sm-8 text-center main-screenshot">
 							<p><a href="https://github.com/LZoog/spacePortfolio/tree/master/tictactoe" target="_blank"><img src="img/icon-gh.png" class="gh"></a>
 							<a href="http://www.zugai.com/tictactoe/" target="_blank">www.zugai.com/tictactoe<br>
-							<img src="img/tictactoe.jpg" alt="Screenshot of TicTacToe" class="img-responsive full-width" /></a>
+							<img src="img/tictactoe/screen0.jpg" alt="Screenshot of TicTacToe" class="img-responsive full-width one-screens-col screen0" /></a>
 						</div>
 						<div class="col-xs-12 col-sm-4 screenshots-title text-center">
 							<p>Click to view project feature details!</p>
 						</div>
-						<div class="col-xs-12 col-sm-2 screenshots">
-							<img src="img/hoh.jpg" alt="Screenshot of House of Hues" class="default current" />
-							<img src="img/hoh/screen1.jpg" alt="screenshot" class="screen1" />
-							<img src="img/hoh/screen2.jpg" alt="screenshot" class="screen2" />
-							<img src="img/hoh/screen2.jpg" alt="screenshot" class="screen3" />
-						</div>
-						<div class="col-xs-12 col-sm-2 screenshots text-center">
-							<img src="img/hoh.jpg" alt="Screenshot of House of Hues" class="screen4" />
-							<img src="img/hoh/screen1.jpg" alt="screenshot" class="screen5" />
-							<img src="img/hoh/screen2.jpg" alt="screenshot" class="screen6" />
+						<div class="col-xs-12 col-sm-4 screenshots">
+							<img src="img/tictactoe/screen0.jpg" alt="screenshot of TicTacToe project" class="screen0 current" />
+							<img src="img/tictactoe/screen1.jpg" alt="screenshot" class="screen1" />
+							<img src="img/tictactoe/screen2.jpg" alt="screenshot" class="screen2" />
+							<img src="img/tictactoe/screen3.jpg" alt="screenshot" class="screen3" />
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-xs-12 text-center">
-							<div class="info-default">
-								<p>In code boot camp, the class was divided up into small groups to create a Ruby on Rails project required to work with user authentication and to allow users to submit something to a database. I essentially became "project leader" during this assignment by breaking up our to-do list onto small steps and assigning them via Trello, and I also did all of the front-end work and more than half of the back-end work.</p>
-								<p>In 5 days, my team and I created House of Hues: an interior design inspiration web application (hey, that almost rhymes).</p>
-								<p>Note: This project certainly isn't complete by any means. There are a few features we didn't get to. :-)<br>
-										Note2: Feel free to make an account with your real or fake e-mail, they aren't used for anything.</p>
-								<p>Biggest challenge: overcoming communication blocks with the team. Things ran much more smoothly with Trello.</p>
+						<div class="col-xs-12">
+							<div class="info-screen0">
+								<p>This project was created in General Assembly’s boot camp for jQuery & Twitter-Bootstrap practice and is a straight-forward TicTacToe game with theme choices. It’s 2 player only and the first to 3 wins.</p>
+								<p><span class="detail">Created with</span>: light JavasScript/jQuery, HTML, Twitter-Bootstrap, SASS/CSS, JavaScript/jQuery</p>
+								<p><span class="detail">Future featured code snippet</span>: Theme implementation</p>
 							</div>
 							<div class="info-screen1">
-								feature details
+								Pokemon theme.
 							</div>
 							<div class="info-screen2">
-								feature details
+								Breaking Bad theme. If the user tries to change themes mid-game, a message appears informing them they cannot.
+							</div>
+							<div class="info-screen3">
+								Dragon Ball Z theme.
 							</div>
 						</div>
 					</div>
