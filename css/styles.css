@@ -339,7 +339,8 @@ div[id^="fl-"] {
   .feather .full-width {
     padding: 3px;
     margin-bottom: 15px;
-    width: 100%; }
+    width: 100%;
+    margin: 0 auto; }
     .feather .full-width:not(.screen0) {
       width: 75%; }
   .feather .gh {
@@ -416,9 +417,9 @@ div[id^="fl-"] {
 
 figcaption {
   color: grey;
-  text-align: right;
+  text-align: center;
   position: relative;
-  top: -10px;
+  padding-bottom: 25px;
   font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier; }
 
 .featherlight:last-of-type {
@@ -728,6 +729,10 @@ figcaption {
 
   #home-text-top {
     top: -20em; }
+
+  figcaption {
+    text-align: right;
+    padding-bottom: 0; }
 
   #contact {
     position: static;

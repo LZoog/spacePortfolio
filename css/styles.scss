@@ -429,6 +429,7 @@ div[id^="fl-"] {
     padding: 3px;
     margin-bottom: 15px;
     width: 100%;
+    margin: 0 auto;
 
     &:not(.screen0) {
       width: 75%;
@@ -536,9 +537,9 @@ div[id^="fl-"] {
 
 figcaption {
   color: $grey;
-  text-align: right;
+  text-align: center;
   position: relative;
-  top: -10px;
+  padding-bottom: 25px;
   font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier;
 }
 
@@ -811,6 +812,10 @@ figcaption {
     top: -20em;
   }
 
+  figcaption {
+    text-align: right;
+    padding-bottom: 0;
+  }
 
   #contact {
     position: static;
