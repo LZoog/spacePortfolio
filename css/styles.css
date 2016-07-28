@@ -414,6 +414,13 @@ div[id^="fl-"] {
       color: #3b3f6b;
       text-shadow: 0px 0px 1px #8e4f73; }
 
+figcaption {
+  color: grey;
+  text-align: right;
+  position: relative;
+  top: -10px;
+  font-family: 'Inconsolata', Monaco, Consolas, 'Courier New', Courier; }
+
 .featherlight:last-of-type {
   background: rgba(0, 0, 0, 0.65); }
 
